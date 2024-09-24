@@ -88,8 +88,6 @@
             <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>';
     } else {
         echo'
-            <a class="login" href="/login">Login</a>
-            <a class="signup" href="/sign-up">Sign Up</a>
             <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>';
     }
 ?>    

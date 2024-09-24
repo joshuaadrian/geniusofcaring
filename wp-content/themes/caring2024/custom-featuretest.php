@@ -168,13 +168,9 @@ echo '
                         <section class="user_info">
                             <img src="' . $User->user_photo . '">
                             <h1>' . $User->user_name . '<br><span></span>';
-        if(is_user_logged_in()){
-            echo'<span class="email_user">Send ' . $User->user_name . ' a private message</span>';
-        }
         echo'</h1>
                         </section>
 						<button class="share_story button">Share Story</button>
-						<button class="sign_guestbook button">Sign Guestbook</button>
                         <div class="slider_wrapper">
                         <ul class="story_slider">
                             <li class="user_details active" data-user_id="' . $user_id . '">
@@ -222,32 +218,18 @@ echo '
         echo'
                         </ul>
                         <div class="slider_controls"><span class="prev"></span><span class="next"></span></div>
-                        </div>
-                        <section class="guestbook">';
-        include('/nas/content/live/geniusofcaring/wp-content/themes/caring/comments.php');
-        echo'
-                        </section>
-                    </article>
+                        </div>';
+        echo '</article>
                 <a href="/care-gallery" class="close">Care Gallery</a>
                 </div>
 	<div class="share_story_modal">
         <a href="#" class="close">Close</a>
 		<div class="inner">
 			<h1>Share ' . $User->user_name . '&rsquo;s story</h1>
-			<span class="user_url">http://geniusofcaring.wpengine.com/care-gallery/' . $User->user_url . '</span>
-            <div class="addthis_sharing_toolbox" data-url="http://geniusofcaring.wpengine.com/care-gallery/' . $User->user_id . '" data-title="' . $User->user_name . ' on Genius of Caring"></div>
+			<span class="user_url">http://geniusofcaring.com/care-gallery/' . $User->user_url . '</span>
+            <div class="addthis_sharing_toolbox" data-url="http://geniusofcaring.com/care-gallery/' . $User->user_id . '" data-title="' . $User->user_name . ' on Genius of Caring"></div>
 		</div>
 	</div>
-	<div class="email_user_modal">
-        <a href="#" class="close">Close</a>
-		<form>
-			<h1>Send a Private Message</h1>
-			<p>Enter your message in the form below and it will be sent to the member&rsquo;s email inbox. Your email address will be provided to them.</p>
-			<label for="your_message">Message</label>
-			<textarea name="your_message" id="your_message"></textarea>
-			<input type="submit" value="submit" class="button">
-		</form>
-    </div>
     <script>
         story_slider();
     </script>';
