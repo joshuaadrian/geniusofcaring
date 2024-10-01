@@ -14,8 +14,9 @@
             <source type="video/m4v" src="https://geniusofcaring.s3.amazonaws.com/video/portrait_page/loops/Portrait_Page-_Loop_of_island-720_2500.m4v">
         </video>
         <section class="overlay prompt">
-            <a href="/portraits/pam-ed"><img class="pam_and_ed" src="/wp-content/themes/caring/images/PamEd.jpg"></a>
-            <a href="/portraits/kamaria"><img class="kamaria" src="/wp-content/themes/caring/images/Kamaria_portrait_tile.jpg"></a>
+            <a href="/portraits/pam-ed"><img class="pam_and_ed" src="'.get_stylesheet_directory_uri().'/images/PamEd.jpg"></a>
+            <a href="/portraits/kamaria"><img class="kamaria" src="'.get_stylesheet_directory_uri().'/images/Kamaria_portrait_tile.jpg"></a>
+            <a href="/portraits/chuck-and-dolores"><img class="chuckanddolores" src="'.get_stylesheet_directory_uri().'/images/chuck-and-dolores.jpg"></a>
         </section>
     </section>
     ';
@@ -28,8 +29,9 @@
             <source type="video/m4v" src="https://geniusofcaring.s3.amazonaws.com/video/portrait_page/loops/Portrait_Page-_Loop_of_island-720_2500.m4v">
         </video>
         <section class="overlay prompt">
-            <a href="/portraits/pam-ed"><img class="pam_and_ed" src="/wp-content/themes/caring/images/PamEd.jpg"></a>
-            <a href="/portraits/kamaria"><img class="kamaria" src="/wp-content/themes/caring/images/Kamaria_portrait_tile.jpg"></a>
+            <a href="/portraits/pam-ed"><img class="pam_and_ed" src="'.get_stylesheet_directory_uri().'/images/PamEd.jpg"></a>
+            <a href="/portraits/kamaria"><img class="kamaria" src="'.get_stylesheet_directory_uri().'/images/Kamaria_portrait_tile.jpg"></a>
+            <a href="/portraits/chuckanddolores"><img class="chuckanddolores" src="'.get_stylesheet_directory_uri().'/images/chuck-and-dolores.jpg"></a>
         </section>
     </section>
     ';
@@ -183,7 +185,7 @@
                 <button class="skip">Skip</button>
             </section>
             <section class="overlay data">
-                <img class="data_slide" src="/wp-content/themes/caring/images/slide.png">
+                <img class="data_slide" src="'.get_stylesheet_directory_uri().'/images/slide.png">
                 <button>Continue</button>
             </section>
         </section>';
