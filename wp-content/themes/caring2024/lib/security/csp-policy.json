@@ -1,0 +1,98 @@
+{
+	"default-src": {
+		"self": true
+	},
+	"connect-src": {
+		"allow": [
+			"https://cdn-cookieyes.com",
+			"https://*.cookieyes.com",
+			"https://*.google-analytics.com",
+			"https://*.google.com",
+			"https://*.googletagmanager.com",
+			"https://fonts.googleapis.com",
+			"https://px.ads.linkedin.com",
+			"https://*.googlesyndication.com",
+			"https://*.analytics.google.com"
+		],
+		"self": true
+	},
+	"media-src": {
+		"allow": [
+			"https://*.amazonaws.com"
+		],
+		"self": true,
+		"data": true
+	},
+	"font-src": {
+		"allow": [
+			"https://ka-p.fontawesome.com",
+			"https://fonts.gstatic.com",
+			"https://*.typekit.net"
+		],
+		"self": true,
+		"data": true
+	},
+	"frame-src": {
+		"allow": [
+			"https://*.cookieyes.com",
+			"https://*.simplecast.com",
+			"https://*.youtube.com",
+			"https://*.vimeo.com",
+			"https://*.youtu.be",
+			"https://*.spotify.com",
+			"https://*.doubleclick.net"
+		],
+		"self": true
+	},
+	"img-src": {
+		"allow": [
+			"*.strongersouthwest.com",
+			"https://strongersouthwest.com",
+			"https://dev-ell-redeye.pantheonsite.io",
+			"https://test-ell-redeye.pantheonsite.io",
+			"https://*.googletagmanager.com",
+			"https://*.google-analytics.com",
+			"https://*.gstatic.com",
+			"https://cdn-cookieyes.com",
+			"https://*.cookieyes.com",
+			"https://px.ads.linkedin.com",
+			"https://t.co",
+			"https://www.facebook.com",
+			"https://analytics.twitter.com",
+			"https://secure.gravatar.com",
+			"https://*.typekit.net"
+		],
+		"blob": true,
+		"self": true,
+		"data": true
+	},
+	"object-src": {
+		"none": true
+	},
+	"script-src": {
+		"allow": [
+			"https://*.googletagmanager.com",
+			"https://tagmanager.google.com",
+			"https://*.jquery.com",
+			"https://*.google-analytics.com",
+			"https://static.ads-twitter.com",
+			"https://*.googleapis.com",
+			"https://*.typekit.net",
+			"https://*.googlesyndication.com",
+			"https://*.googleadservices.com"
+		],
+		"self": true,
+		"unsafe-inline": true,
+		"unsafe-eval": false
+	},
+	"style-src": {
+		"allow": [
+			"https://*.googletagmanager.com",
+			"https://tagmanager.google.com",
+			"https://fonts.googleapis.com"
+		],
+		"self": true,
+		"unsafe-inline": true
+	},
+	"upgrade-insecure-requests": true
+}

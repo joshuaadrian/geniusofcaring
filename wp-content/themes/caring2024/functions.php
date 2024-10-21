@@ -1,7 +1,19 @@
 <?php
-/**
- * FiRe functions and definitions
- */
+
+require __DIR__ . '/lib/security/vendor/autoload.php';
+
+$goc_includes = [
+    'lib/security/csp-headers.php',
+];
+
+foreach ($goc_includes as $file) {
+  if (!$filepath = locate_template($file)) {
+    trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
+  }
+
+  require_once $filepath;
+}
+unset($file, $filepath);
 
 // remove Extraneious WordPress headers
         //remove_action('wp_head', 'feed_links', 2);

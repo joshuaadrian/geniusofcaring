@@ -26,7 +26,7 @@ function LoadMore(){
         page = page+1;
     }
 	$('ul.gallery').data('page', page);
-    $.post( '/wp-content/themes/caring/helpers/load_more.php', { limit: "100", page: page } ) 
+    $.post( '/wp-content/themes/caring2024/helpers/load_more.php', { limit: "100", page: page } ) 
         .done(function( data ) {
             var newitems = $(data);
             $('ul.gallery').isotope( 'insert', newitems )
@@ -110,7 +110,7 @@ function story_slider(){
 	$('.email_user_modal form').submit(function(){
 		var send_to_id = $('.user_details').data('user_id');
 		var your_message = $('.email_user_modal #your_message').val();
-		$.post( '/wp-content/themes/caring/helpers/handle_private_message.php', { send_to_id: send_to_id, your_message: your_message } )
+		$.post( '/wp-content/themes/caring2024/helpers/handle_private_message.php', { send_to_id: send_to_id, your_message: your_message } )
 			.done(function( data ) {
 				$('.email_user_modal form').html('<p>Your private message has been sent! This user will now have your personal email address for future correspondence.</p>');
 				setTimeout(function(){ $('.email_user_modal').fadeOut() }, 1600);
@@ -187,7 +187,7 @@ function my_story_functions(){
             var name = list.find('.name').first().val();
             var user_type = list.find('.user_type').first().val();
             var website_url = list.find('.website_url').first().val();
-			$.post( '/wp-content/themes/caring/helpers/handle_profiles.php', { is_profile: is_profile, photo: photo, bio: bio, name: name, user_type: user_type, website_url: website_url } )
+			$.post( '/wp-content/themes/caring2024/helpers/handle_profiles.php', { is_profile: is_profile, photo: photo, bio: bio, name: name, user_type: user_type, website_url: website_url } )
 				.done(function( data ) {
                 $(list).children('.saved').show();
                 $(list).children('.saved').fadeOut(3000);
@@ -202,7 +202,7 @@ function my_story_functions(){
             var content_id = list.data('content_id');
             var field_content = list.find('select').first().val();
             var additional = list.find('textarea').first().val();
-			$.post( '/wp-content/themes/caring/helpers/handle_profiles.php', { field_id: field_id, content_id: content_id, field_content: field_content, additional: additional, photo : photo } )
+			$.post( '/wp-content/themes/caring2024/helpers/handle_profiles.php', { field_id: field_id, content_id: content_id, field_content: field_content, additional: additional, photo : photo } )
 				.done(function( data ) {
                 $(list).children('.saved').show();
                 $(list).children('.saved').fadeOut(3000);
@@ -222,8 +222,8 @@ function my_story_functions(){
 
 
             var croppicProfileOptions = {
-                    uploadUrl:'/wp-content/themes/caring/helpers/crop_temp/img_save_to_file.php',
-                    cropUrl:'/wp-content/themes/caring/helpers/crop_temp/img_crop_to_file.php',
+                    uploadUrl:'/wp-content/themes/caring2024/helpers/crop_temp/img_save_to_file.php',
+                    cropUrl:'/wp-content/themes/caring2024/helpers/crop_temp/img_crop_to_file.php',
                     modal:true,
                     imgEyecandyOpacity:0.4,
                     loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
@@ -234,8 +234,8 @@ function my_story_functions(){
             }
             var cropprofile = new Croppic('crop-profile', croppicProfileOptions);
             var croppicOptions = {
-                    uploadUrl:'/wp-content/themes/caring/helpers/crop_temp/img_save_to_file.php',
-                    cropUrl:'/wp-content/themes/caring/helpers/crop_temp/img_crop_to_file.php',
+                    uploadUrl:'/wp-content/themes/caring2024/helpers/crop_temp/img_save_to_file.php',
+                    cropUrl:'/wp-content/themes/caring2024/helpers/crop_temp/img_crop_to_file.php',
                     modal:true,
                     imgEyecandyOpacity:0.4,
                     loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
@@ -328,7 +328,7 @@ function gallery_functions(){
     $('.gallery').on('click', 'a', function(){
         var get_user = $(this).parent().data('user_id');
         var get_field = $(this).parent().data('field_id');
-        $.post( '/wp-content/themes/caring/helpers/handle_gallery_modal.php', { field_id: get_field, user_id: get_user } )
+        $.post( '/wp-content/themes/caring2024/helpers/handle_gallery_modal.php', { field_id: get_field, user_id: get_user } )
             .done(function( data ) {
             $('body').addClass('has_modal');
             $('body').append(data);
@@ -418,7 +418,7 @@ function global_functions(){
 			alert('Please enter your email and a message');
 			return false;
 		}
-		$.post( '/wp-content/themes/caring/helpers/handle_help_message.php', { your_email: your_email, your_message: your_message } )
+		$.post( '/wp-content/themes/caring2024/helpers/handle_help_message.php', { your_email: your_email, your_message: your_message } )
 			.done(function( data ) {
 				$('.need_help_modal form').html('<p>Your message has been sent</p>');
 				setTimeout(function(){ $('.need_help_modal').fadeOut() }, 1600);
@@ -476,7 +476,7 @@ function chapter_one(video_time){
         var content_id = $(this).data('content_id');
         var field_id = $(this).data('field_id');
         if($(this).parent('fieldset').length){ //only post if in fieldset
-            $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+            $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
                 .done(function( data ) {
             });
         }
@@ -513,7 +513,7 @@ function chapter_two(video_time){
         var content_id = $(this).data('content_id');
         var field_id = $(this).data('field_id');
         if($(this).parent('fieldset').length){ //only post if in fieldset
-            $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+            $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
                 .done(function( data ) {
             });
         }
@@ -546,7 +546,7 @@ function chapter_three(video_time){
         var content_id = $(this).data('content_id');
         var field_id = $(this).data('field_id');
         if($(this).parent('fieldset').length){ //only post if in fieldset
-            $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+            $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
                 .done(function( data ) {
             });
         }
@@ -578,7 +578,7 @@ function chapter_four(video_time){
         var field_content = $('.response_four textarea').val();
         var content_id = $('.response_four textarea').data('content_id');
         var field_id = $('.response_four textarea').data('field_id');
-        $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+        $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
             .done(function( data ) {
         });
         $('section.response_four').hide();
@@ -615,7 +615,7 @@ function chapter_five(video_time){
     $('.response_five .prompt button').click(function(){
         var email_address = $('.response_five .email_address').val();
         if( /(.+)@(.+){2,}.(.+){2,}/.test(email_address) ){
-             $.post( '/wp-content/themes/caring/helpers/handle_signup.php', { email_address: email_address } )
+             $.post( '/wp-content/themes/caring2024/helpers/handle_signup.php', { email_address: email_address } )
                  .done(function( data ) {console.log(data);
 					if(data=='Error'){
 						//display error
@@ -883,7 +883,7 @@ function login_functions(){
     })
     $('#signup').submit(function(){
         var email_address = $('#signup input[type=email]').val();
-         $.post( '/wp-content/themes/caring/helpers/handle_signup.php', { email_address: email_address } )
+         $.post( '/wp-content/themes/caring2024/helpers/handle_signup.php', { email_address: email_address } )
              .done(function( data ) {
                 if(data.indexOf("Error")>=0){
                     $('#signup').prepend('<p class="error">That Username is Taken. Please login or choose a different email.</p>');
@@ -895,7 +895,7 @@ function login_functions(){
      })
     $('#lostpassword').submit(function(){
         var email_address = $('#lostpassword input[type=email]').val();
-         $.post( '/wp-content/themes/caring/helpers/handle_password_reset.php', { email_address: email_address } )
+         $.post( '/wp-content/themes/caring2024/helpers/handle_password_reset.php', { email_address: email_address } )
              .done(function( data ) {
                 $('#lostpassword').html('<p>Your password has been reset. A new password has been sent to your email address.</p>');
          });
@@ -916,7 +916,7 @@ function default_functions(){
     })
     
     $('section.logout button').click(function(){
-        $.post( '/wp-content/themes/caring/helpers/handle_logout.php' )
+        $.post( '/wp-content/themes/caring2024/helpers/handle_logout.php' )
             .done(function( data ) {
             window.location = '/';
         }); 
@@ -927,7 +927,7 @@ function default_functions(){
 		var new_password = $('section.change_password .new_password').val();
 		var repeat_password = $('.change_password .repeat_password').val();
 		if(new_password==repeat_password && new_password!=''){
-			$.post( '/wp-content/themes/caring/helpers/handle_change_password.php', { new_password: new_password } ) 
+			$.post( '/wp-content/themes/caring2024/helpers/handle_change_password.php', { new_password: new_password } ) 
 				.done(function( data ) {
 				$('section.change_password').html('<p>Your password has been updated.</p>');
 			}); 
@@ -945,7 +945,7 @@ function settings_functions(){
 			alert('Please enter only letters and numbers for your custom URL.');
 			return false;
 		}
-			$.post( '/wp-content/themes/caring/helpers/handle_seturl.php', { seturl: seturl } ) 
+			$.post( '/wp-content/themes/caring2024/helpers/handle_seturl.php', { seturl: seturl } ) 
 				.done(function( data ) {
 					if(data=='Error-1'){ //URL Exists
 						$('section.seturl button').before('<p>This URL is taken. Please choose another.</p>');
@@ -970,7 +970,7 @@ function settings_functions(){
 	$('section.privacy  button').click(function(){
 		
 		var public_password = $('#public_password').val();
-			$.post( '/wp-content/themes/caring/helpers/handle_privacy.php', { public_password: public_password } ) 
+			$.post( '/wp-content/themes/caring2024/helpers/handle_privacy.php', { public_password: public_password } ) 
 				.done(function( data ) {
 					$('.return_message').remove();
 					if (data=='Success'){ //All Good
@@ -1076,6 +1076,7 @@ var care_gallery_active = false;
 
 
 function kamaria_functions(){
+
     var timer;
     $('body').mousemove(function() {
         $('.page_header').css({'opacity':'1'});
@@ -1200,7 +1201,9 @@ function kamaria_functions(){
 }
 
 var is_map_init = false;
+
 function story2_chapter_one(video_time){
+
     init_chapter_display('1');
     var video_id='Chapter_One_Video';
     chapter_init(video_id,video_time);
@@ -1209,21 +1212,18 @@ function story2_chapter_one(video_time){
     var video_loop_begin = '83.1';
     var video_loop_end = '121.05';
     $("#Chapter_One_Video").on('timeupdate',function(event){
+
         if(!$('#'+video_id).hasClass('ended')){
             if (this.currentTime >= video_loop_begin) {
                 $('.video_controls').hide();
                 $('section.response_one').fadeIn();
                 $('#'+video_id).addClass('ended');
-                if(!is_map_init){
-                    is_map_init = true;
-                    initMap();
-                }
-
             }
             if (this.currentTime >= video_loop_end) {
                 this.currentTime = video_loop_begin;
             }
         }
+
     });
 
 
@@ -1232,28 +1232,10 @@ function story2_chapter_one(video_time){
         document.getElementById('Chapter_One_Video').play();
     });
 
-    $('.response_one .prompt button').click(function(){
-        //this all needs to change to include map
-        var field_content = $('#pac-input').val();
-        var content_id = $(this).data('content_id');
-        var field_id = $(this).data('field_id');
-        if($(this).parent('fieldset').length){ //only post if in fieldset
-            $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
-                .done(function( data ) {
-                });
-        }
-        $('.response_one fieldset').fadeOut();
-        $('.response_one .data').fadeIn();
-        $('#mapPicker').animate({'opacity':'1'});
-        setTimeout( function(){
-            $('.response_one .data button').click();
-        }  , 5200 );
-    })
-    $('.response_one .data button').click(function(){
+    $('.response_one button').click(function(){
         $('section.response_one').hide();
         $('.response_one fieldset').fadeIn();
         $('.response_one .data').fadeOut();
-        $('#mapPicker').animate({'opacity':'0'});
         $('#Chapter_One_Video').hide();
         document.getElementById('Chapter_One_Video').pause();
         story2_chapter_two();
@@ -1291,7 +1273,7 @@ function story2_chapter_two(video_time){
         var content_id = $(this).data('content_id');
         var field_id = $(this).data('field_id');
         if($(this).parent('fieldset').length){ //only post if in fieldset
-            $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+            $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
                 .done(function( data ) {
                 });
         }
@@ -1331,7 +1313,7 @@ function story2_chapter_three(video_time){
         var field_content = $('.response_four textarea').val();
         var content_id = $('.response_four textarea').data('content_id');
         var field_id = $('.response_four textarea').data('field_id');
-        $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+        $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
             .done(function( data ) {
             });
         $('section.response_three').hide();
@@ -1370,7 +1352,7 @@ function story2_chapter_four(video_time){
         var field_content = $('.response_four textarea').val();
         var content_id = $('.response_four textarea').data('content_id');
         var field_id = $('.response_four textarea').data('field_id');
-        $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+        $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
             .done(function( data ) {
             });
         $('section.response_four').hide();
@@ -1408,7 +1390,7 @@ function story2_chapter_five(video_time){
     $('.response_five .prompt button').click(function(){
         var email_address = $('.response_five .email_address').val();
         if( /(.+)@(.+){2,}.(.+){2,}/.test(email_address) ){
-            $.post( '/wp-content/themes/caring/helpers/handle_signup.php', { email_address: email_address } )
+            $.post( '/wp-content/themes/caring2024/helpers/handle_signup.php', { email_address: email_address } )
                 .done(function( data ) {
                     if(data=='Error'){
                         //display error
@@ -1467,7 +1449,7 @@ function testfeature_functions(){
     $('.gallery').on('click', 'a', function(){
         var get_user = $(this).parent().data('user_id');
         var get_field = $(this).parent().data('field_id');
-        $.post( '/wp-content/themes/caring/helpers/handle_gallery_modal.php', { field_id: get_field, user_id: get_user } )
+        $.post( '/wp-content/themes/caring2024/helpers/handle_gallery_modal.php', { field_id: get_field, user_id: get_user } )
             .done(function( data ) {
                 $('body').addClass('has_modal');
                 $('body').append(data);
@@ -1650,7 +1632,7 @@ function pamed_chapter_one(video_time){
         var content_id = $(this).data('content_id');
         var field_id = $(this).data('field_id');
         if($(this).parent('fieldset').length){ //only post if in fieldset
-            $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+            $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
                 .done(function( data ) {
                 });
         }
@@ -1696,7 +1678,7 @@ function pamed_chapter_two(video_time){
         var content_id = $(this).data('content_id');
         var field_id = $(this).data('field_id');
         if($(this).parent('fieldset').length){ //only post if in fieldset
-            $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+            $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
                 .done(function( data ) {
                 });
         }
@@ -1736,7 +1718,7 @@ function pamed_chapter_three(video_time){
         var field_content = $('.response_four textarea').val();
         var content_id = $('.response_four textarea').data('content_id');
         var field_id = $('.response_four textarea').data('field_id');
-        $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+        $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
             .done(function( data ) {
             });
         $('section.response_three').hide();
@@ -1775,7 +1757,7 @@ function pamed_chapter_four(video_time){
         var field_content = $('.response_four textarea').val();
         var content_id = $('.response_four textarea').data('content_id');
         var field_id = $('.response_four textarea').data('field_id');
-        $.post( '/wp-content/themes/caring/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
+        $.post( '/wp-content/themes/caring2024/helpers/handle_stories.php', { field_id: field_id, field_content: field_content, content_id: content_id } )
             .done(function( data ) {
             });
         $('section.response_four').hide();
@@ -1813,7 +1795,7 @@ function pamed_chapter_five(video_time){
     $('.response_five .prompt button').click(function(){
         var email_address = $('.response_five .email_address').val();
         if( /(.+)@(.+){2,}.(.+){2,}/.test(email_address) ){
-            $.post( '/wp-content/themes/caring/helpers/handle_signup.php', { email_address: email_address } )
+            $.post( '/wp-content/themes/caring2024/helpers/handle_signup.php', { email_address: email_address } )
                 .done(function( data ) {
                     if(data=='Error'){
                         //display error
@@ -1859,7 +1841,7 @@ function NewLoadMore(){
         page = page+1;
     }
     $('ul.gallery').data('page', page);
-    $.post( '/wp-content/themes/caring/helpers/new_load_more.php', { limit: "10", page: page } )
+    $.post( '/wp-content/themes/caring2024/helpers/new_load_more.php', { limit: "10", page: page } )
         .done(function( data ) {
             var newitems = $(data);
             $('ul.gallery').isotope( 'insert', newitems )

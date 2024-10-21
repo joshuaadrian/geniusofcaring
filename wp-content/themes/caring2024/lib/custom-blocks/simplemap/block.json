@@ -1,0 +1,14 @@
+{
+    "name": "acf/simplemap",
+    "title": "SimpleMap",
+    "description": "A custom simplemap block.",
+    "style": [ "file:./simplemap.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["locations", "simplemap"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "simplemap.php"
+    },
+    "align": "full"
+}

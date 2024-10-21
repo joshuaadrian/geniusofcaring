@@ -1,0 +1,14 @@
+{
+    "name": "acf/event",
+    "title": "Event",
+    "description": "A custom event block.",
+    "style": [ "file:./event.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["event", "conference", "date"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "event.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "acf/box-list",
+    "title": "Box List",
+    "description": "A custom box-list block.",
+    "style": [ "file:./box-list.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["box-list"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "box-list.php"
+    },
+    "align": "full"
+}

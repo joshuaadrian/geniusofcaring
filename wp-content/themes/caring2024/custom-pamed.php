@@ -5,60 +5,93 @@
     session_start();
     get_header();
 
-        
-    //Chapter 1
-        $content_id = '';
-        $field_content = '';
-        // if($answers[1]->field_content != ''){
-        //     $content_id = $answers[1]->content_id;
-        //     $field_content = $answers[1]->field_content;
-        // }
-        echo'
-        <section class="video_container hd_on">
-            <video id="Chapter_One_Video"  autoplay="true" preload="auto" class="active">
-                <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/1/Chapter_1_-_am_a_Caregiver_(1).webm">
-                <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/1/Chapter_1_-_am_a_Caregiver_(1).mp4">
-            </video>
-            <video id="Chapter_Two_Video" preload="none">
-                <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/2/Chapter_2_-_The_Beginning_(2).webm">
-                <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/2/Chapter_2_-_The_Beginning_(2).mp4">
-            </video>
-            <video id="Chapter_Three_Video" preload="none">
-                <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/3/Chapter_3_-_Interdependence.webm">
-                <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/3/Chapter_3_-_Interdependence.mp4">
-            </video>
-            <video id="Chapter_Four_Video" preload="none">
-                <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/4/Chapter_4_-_Loss_and_Grief.webm">
-                <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/4/Chapter_4_-_Loss_and_Grief.mp4">
-            </video>
-            <video id="Chapter_Five_Video" preload="none">
-                <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/5/Chapter_5_-_Inspiration.webm">
-                <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/5/Chapter_5_-_Inspiration.mp4">
-            </video>
-            <div class="bottom_overlay">
-            <div class="video_controls">
-                <div class="seek_bar_container">
-                    <div class="seek_bar"></div>
-                </div>
-                <span class="play_pause pause"></span>
-                <span class="mute_button mute_off"></span>
-                <div class="volume_container">
-                    <div class="volume_slider"></div>
-                </div>
+    $content_id = '';
+    $field_content = '';
+
+?>
+
+<section class="video_container hd_on">
+
+    <!-- Chapter One -->
+    <video id="Chapter_One_Video" playsinline="true" autoplay="true" preload="auto" class="active">
+        <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/1/Chapter_1_-_am_a_Caregiver_(1).webm">
+        <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/1/Chapter_1_-_am_a_Caregiver_(1).mp4">
+    </video>
+
+    <!-- Chapter Two -->
+    <video id="Chapter_Two_Video" preload="none">
+        <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/2/Chapter_2_-_The_Beginning_(2).webm">
+        <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/2/Chapter_2_-_The_Beginning_(2).mp4">
+    </video>
+
+    <!-- Chapter Three -->
+    <video id="Chapter_Three_Video" preload="none">
+        <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/3/Chapter_3_-_Interdependence.webm">
+        <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/3/Chapter_3_-_Interdependence.mp4">
+    </video>
+
+    <!-- Chapter Four -->
+    <video id="Chapter_Four_Video" preload="none">
+        <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/4/Chapter_4_-_Loss_and_Grief.webm">
+        <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/4/Chapter_4_-_Loss_and_Grief.mp4">
+    </video>
+
+    <!-- Chapter Five -->
+    <video id="Chapter_Five_Video" preload="none">
+        <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/5/Chapter_5_-_Inspiration.webm">
+        <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/PamAndEd/5/Chapter_5_-_Inspiration.mp4">
+    </video>
+
+    <div class="bottom_overlay">
+
+        <div class="video_controls">
+            <div class="seek_bar_container">
+                <div class="seek_bar"></div>
             </div>
-            <nav class="chapters_nav">
-                <ul>
-                    <li class="heading">Chapters</li>
-                    <li class="one active">Chapter One (1:02)</li>
-                    <li class="two">Chapter Two (2:30)</li>
-                    <li class="three">Chapter Three (2:08)</li>
-                    <li class="four">Chapter Four (2:25)</li>
-                    <li class="five">Chapter Five (1:07)</li>
-                </ul>
-            </nav>
+            <span class="play_pause pause"></span>
+            <span class="mute_button mute_off"></span>
+            <div class="volume_container">
+                <div class="volume_slider"></div>
             </div>
-            <span class="chapter_display"><span class="chapter_1"><span></span></span><span class="chapter_2"><span></span></span><span class="chapter_3"><span></span></span><span class="chapter_4"><span></span></span><span class="chapter_5"><span></span></span></span>
-        </section>
+        </div>
+
+        <nav class="chapters_nav">
+            <ul>
+                <li class="heading">Chapters</li>
+                <li class="one active">Chapter One (1:02)</li>
+                <li class="two">Chapter Two (2:30)</li>
+                <li class="three">Chapter Three (2:08)</li>
+                <li class="four">Chapter Four (2:25)</li>
+                <li class="five">Chapter Five (1:07)</li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <span class="chapter_display">
+        <span class="chapter_1">
+            <span></span>
+        </span>
+        <span class="chapter_2">
+            <span></span>
+        </span>
+        <span class="chapter_3">
+            <span></span>
+        </span>
+        <span class="chapter_4">
+            <span></span>
+        </span>
+        <span class="chapter_5">
+            <span></span>
+        </span>
+    </span>
+
+</section>
+
+<?php
+
+echo'
+
         <section class="full response response_one">
             <section class="overlay prompt">
                 <fieldset>
@@ -87,7 +120,7 @@
                                         <button class="skip">Skip</button>
             </section>
             <section class="overlay data">
-                <img class="data_slide" src="/wp-content/themes/caring/images/slide.png">
+                <img class="data_slide" src="'.get_stylesheet_directory_uri().'/images/slide.png">
                 <button>Continue</button>
             </section>
         </section>';
@@ -206,6 +239,6 @@ echo'
                 <a class="button" href="/my-story">My Story</a>
             </section>
         </section>';
-get_footer();
+?>
 
- ?>
+<?php get_footer(); ?>

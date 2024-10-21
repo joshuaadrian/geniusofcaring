@@ -31,7 +31,7 @@
         <section class="overlay prompt">
             <a href="/portraits/pam-ed"><img class="pam_and_ed" src="'.get_stylesheet_directory_uri().'/images/PamEd.jpg"></a>
             <a href="/portraits/kamaria"><img class="kamaria" src="'.get_stylesheet_directory_uri().'/images/Kamaria_portrait_tile.jpg"></a>
-            <a href="/portraits/chuckanddolores"><img class="chuckanddolores" src="'.get_stylesheet_directory_uri().'/images/chuck-and-dolores.jpg"></a>
+            <a href="/portraits/chuck-and-dolores"><img class="chuckanddolores" src="'.get_stylesheet_directory_uri().'/images/chuck-and-dolores.jpg"></a>
         </section>
     </section>
     ';

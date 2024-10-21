@@ -25,10 +25,10 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="https://www.google.com/jsapi?key=AIzaSyDzBw_JyK6f08_TrmdBmhs8FtHdZS-zMFg"></script>
+<!--     <script src="https://www.google.com/jsapi?key=AIzaSyDzBw_JyK6f08_TrmdBmhs8FtHdZS-zMFg"></script>
     <script>
         google.load('maps', '3', {other_params:'libraries=places'});
-    </script>
+    </script> -->
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     <script src="<?= get_template_directory_uri(); ?>/js/scripts.js" type="text/javascript"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/isotope.js" type="text/javascript"></script>
@@ -75,21 +75,7 @@
             ?>
         </nav>
         <nav class="secondary_nav">
-<?php
-    if(is_user_logged_in()){
-        $user__head_image = $User->user_photo;
-        if($User->user_photo == get_template_directory_uri() . '/images/profile_add_image_bttn.png' || $User->user_photo == get_template_directory_uri() . '/images/defaults/profile.png' || $User->user_photo == ''){
-            $user__head_image = get_template_directory_uri() . '/images/defaults/profile.png';
-        }
-    
-        echo'
-            <a href="/my-story" title="Add to your story"><img src="' . $user__head_image . '"></a>
-            <a class="gear" href="/settings" title="Edit Settings">Edit Settings</a>
-            <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>';
-    } else {
-        echo'
-            <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>';
-    }
-?>    
+            <a class="nav-button" href="https://www.globalgiving.org/projects/the-genius-of-caring/"><span>Support</span></a>
+            <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>
         </nav>
     </header>

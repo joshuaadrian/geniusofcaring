@@ -1,0 +1,14 @@
+{
+    "name": "acf/podcasts",
+    "title": "Podcasts",
+    "description": "A custom podcasts block.",
+    "style": [ "file:./podcasts.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["podcasts"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "podcasts.php"
+    },
+    "align": "full"
+}

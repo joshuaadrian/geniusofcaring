@@ -17,7 +17,7 @@
     if(!get_query_var('user_url')){ 
         echo'
         <article class="full">
-            <ul class="filter">
+            <ul class="filter show">
                 <li class="switch">Filter: <span class="filter_text">View All Stories</span> <form method="post" action="/user-search"><input type="text" name="user_search" placeholder="Member Search"></form></li>
                 <li data-filter="*">View All Stories</li>';
         foreach( $prompt_titles as $field_id=>$prompt){

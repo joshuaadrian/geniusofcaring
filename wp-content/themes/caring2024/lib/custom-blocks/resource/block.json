@@ -1,0 +1,14 @@
+{
+    "name": "acf/resource",
+    "title": "Resource",
+    "description": "A custom resource block.",
+    "style": [ "file:./resource.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["resource", "pdf", "media", "download"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "resource.php"
+    },
+    "align": "full"
+}
