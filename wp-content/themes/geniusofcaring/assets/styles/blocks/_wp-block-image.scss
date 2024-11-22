@@ -1,0 +1,36 @@
+.wp-block-image {
+
+	margin:0;
+
+	&.cover {
+		height:100%;
+		width:100%;
+
+		img {
+			max-width: 9999px;
+			object-fit: cover;
+		}
+	}
+
+	img {
+
+		@media(max-width:767px) {
+			width:100%;
+			display: block;
+		}
+
+	}
+
+	&.aligncenter {
+		float:none !important;
+		display: flex !important;
+		justify-content: center;
+	}
+
+	&.alignright {
+		float:none !important;
+		display: flex !important;
+		justify-content: flex-end;
+	}
+
+}

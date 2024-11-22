@@ -1,0 +1,29 @@
+.wp-block-separator {
+
+  width:120px;
+  border-width: 0 0 1px;
+  border-style: solid;
+  opacity:1;
+  margin:30px 0;
+  background:none !important;
+
+  @for $i from 1 through length($colors) {
+
+		$color       : nth( nth( $colors, $i ), 2 );
+		$color_name  : nth( nth( $colors, $i ), 1 );
+
+		&.has-text-color.has-#{$color_name}-color {
+			color:$color !important;
+		}
+
+    &.has-background.has-#{$color_name}-background-color {
+			border-color:$color !important;
+		}
+
+	}
+
+	&.is-style-wide {
+		width:100%;
+	}
+
+}

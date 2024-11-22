@@ -32,7 +32,7 @@ class Story {
         $results = $statement->fetch(PDO::FETCH_ASSOC);
         $this->user_photo = $results['photo'];
         if($this->user_photo==''){
-            $this->user_photo = '/wp-content/themes/caring/images/defaults/profile.png';
+            $this->user_photo = '/wp-content/themes/caring2024/images/defaults/profile.png';
         }
         $this->user_name = $results['name'];
         $this->user_type = $results['user_type'];
@@ -91,7 +91,7 @@ class Story {
                 } elseif ($portrait_default_selector == 8 || $portrait_default_selector == 9) {
                     $img_version = '4';
                 }
-                $answer->photo = '/wp-content/themes/caring/images/defaults/story_images/Untitled-' . $field_id . '-' . $img_version . '.jpg';
+                $answer->photo = '/wp-content/themes/caring2024/images/defaults/story_images/Untitled-' . $field_id . '-' . $img_version . '.jpg';
             }
             $answers[] = $answer;
         }

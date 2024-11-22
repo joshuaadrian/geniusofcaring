@@ -1,0 +1,14 @@
+{
+    "name": "acf/accordion",
+    "title": "Accordion",
+    "description": "A custom accordion block.",
+    "style": [ "file:./accordion.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["accordion", "faq"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "accordion.php"
+    },
+    "align": "full"
+}

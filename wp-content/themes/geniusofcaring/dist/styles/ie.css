@@ -1,0 +1,3 @@
+.is-ie .portfolio--grid{-ms-grid-columns:1fr;display:-ms-grid}@media (min-width:667px){.is-ie .portfolio--grid .portfolio--grid{-ms-grid-columns:1fr 1fr}}@media (min-width:768px){.is-ie .portfolio--grid .portfolio--grid{-ms-grid-columns:1fr 1fr 1fr}}@media (min-width:992px){.is-ie .portfolio--grid .portfolio--grid{-ms-grid-columns:1fr 1fr 1fr 1fr}}
+
+/*# sourceMappingURL=ie.css.map*/

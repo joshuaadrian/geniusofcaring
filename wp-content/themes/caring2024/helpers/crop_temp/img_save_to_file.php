@@ -2,8 +2,8 @@
 /*
 *	!!! THIS IS JUST AN EXAMPLE !!!, PLEASE USE ImageMagick or some other quality image processing libraries
 */
-    $webPath = '/wp-content/themes/caring/images/uploads/';
-    $phpPath = "/nas/content/live/geniusofcaring/wp-content/themes/caring/images/uploads/";
+    $webPath = '/wp-content/themes/caring2024/images/uploads/';
+    $phpPath = "/nas/content/live/geniusofcaring/wp-content/themes/caring2024/images/uploads/";
 
 	$allowedExts = array("gif", "jpeg", "jpg", "png", "GIF", "JPEG", "JPG", "PNG");
 	$temp = explode(".", $_FILES["img"]["name"]);

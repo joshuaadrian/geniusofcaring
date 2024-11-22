@@ -38,7 +38,7 @@ if ( !class_exists('User') ) : require_once(get_stylesheet_directory() . '/class
 		$img_version = '4';
             }
             if($photo==''){
-                $photo = '/wp-content/themes/caring/images/defaults/story_images/Untitled-' . $field_id . '-' . $img_version . '.jpg';
+                $photo = '/wp-content/themes/caring2024/images/defaults/story_images/Untitled-' . $field_id . '-' . $img_version . '.jpg';
             }
             echo'
                 <li class="isosizing ' . $class . '" data-field_id="' . $field_id . '" data-user_id="' . $user_id . '" data-content_id="' . $content_id . '" style="background-image:url(' . $photo . ');">

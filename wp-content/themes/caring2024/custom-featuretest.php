@@ -72,8 +72,8 @@ echo'
             </div>';
 
 echo'
-            <ul class="filter">
-                <li class="switch">Filter: <span class="filter_text">View All Stories</span> <form method="post" action="/user-search"><input type="text" name="user_search" placeholder="Member Search"></form></li>
+            <ul class="filter show">
+                <li class="switch">Filter: <span class="filter_text">View All Stories</span></li>
                 <li data-filter="*">View All Stories</li>';
 foreach ($prompt_titles as $field_id => $prompt) {
     echo '
@@ -155,8 +155,8 @@ echo '
     $user_id = $User->user_id;
     $User->get_profile();
     $user_image = $User->user_photo;
-    if($user_image == '/wp-content/themes/caring/images/profile_add_image_bttn.png' || $user_image == '/wp-content/themes/caring/images/defaults/profile.png' || $user_image == ''){
-        $user_image = '/wp-content/themes/caring/images/defaults/user_icon.png';
+    if($user_image == '/wp-content/themes/caring2024/images/profile_add_image_bttn.png' || $user_image == '/wp-content/themes/caring2024/images/defaults/profile.png' || $user_image == ''){
+        $user_image = '/wp-content/themes/caring2024/images/defaults/user_icon.png';
     }
 
     echo'
@@ -206,7 +206,7 @@ echo '
                 $img_version = '4';
             }
             if($photo==''){
-                $photo = '/wp-content/themes/caring/images/defaults/story_images/Untitled-' . $this_field_id . '-' . $img_version . '.jpg';
+                $photo = '/wp-content/themes/caring2024/images/defaults/story_images/Untitled-' . $this_field_id . '-' . $img_version . '.jpg';
             }
             echo'
                             <li class="' . $class . '" data-field_id="' . $this_field_id . '" data-user_id="' . $user_id . '" data-content_id="' . $content_id . '">

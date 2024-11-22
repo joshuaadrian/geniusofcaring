@@ -1,0 +1,61 @@
+/*************************************************
+
+https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/
+
+*************************************************/
+
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "my-plugin/notice",
+    "title": "Notice",
+    "category": "text",
+    "parent": [ "core/group" ], // Setting parent lets a block require that it is only available when nested within the specified blocks. For example, you might want to allow an ‘Add to Cart’ block to only be available within a ‘Product’ block.
+    "ancestor" : [ "my-block/product" ], // The ancestor property makes a block available inside the specified block types at any position of the ancestor block subtree. That allows, for example, to place a ‘Comment Content’ block inside a ‘Column’ block, as long as ‘Column’ is somewhere within a ‘Comment Template’ block. In comparison to the parent property blocks that specify their ancestor can be placed anywhere in the subtree whilst blocks with a specified parent need to be direct children.
+    "icon": "star", // https://developer.wordpress.org/resource/dashicons/
+    "description": "Shows warning, error or success notices...",
+    "keywords": [ "alert", "message" ],
+    "version": "1.0.3",
+    "textdomain": "my-plugin",
+    "attributes": {
+        "message": {
+            "type": "string",
+            "source": "html",
+            "selector": ".message"
+        }
+    },
+    "providesContext": {
+        "my-plugin/message": "message"
+    },
+    "usesContext": [ "groupId" ],
+    "selectors": {
+        "root": ".wp-block-my-plugin-notice"
+    },
+    "supports": {
+        "align": true
+    },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "other", "label": "Other" }
+    ],
+    "example": {
+        "attributes": {
+            "message": "This is a notice!"
+        }
+    },
+    "variations": [
+        {
+            "name": "example",
+            "title": "Example",
+            "attributes": {
+                "message": "This is an example!"
+            }
+        }
+    ],
+    "editorScript": "file:./index.js",
+    "script": "file:./script.js",
+    "viewScript": [ "file:./view.js", "example-shared-view-script" ],
+    "editorStyle": "file:./index.css",
+    "style": [ "file:./style.css", "example-shared-style" ],
+    "render": "file:./render.php"
+}

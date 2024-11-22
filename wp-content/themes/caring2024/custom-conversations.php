@@ -68,24 +68,7 @@
             ?>
         </nav>
         <nav class="secondary_nav">
-<?php
-    if(is_user_logged_in()){
-        $user__head_image = $User->user_photo;
-        if($User->user_photo == '/wp-content/themes/caring/images/profile_add_image_bttn.png' || $User->user_photo == '/wp-content/themes/caring/images/defaults/profile.png' || $User->user_photo == ''){
-            $user__head_image = '/wp-content/themes/caring/images/defaults/profile.png';
-        }
-    
-        echo'
-            <a href="/my-story" title="Add to your story"><img src="' . $user__head_image . '"></a>
-            <a class="gear" href="/settings" title="Edit Settings">Edit Settings</a>
-            <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>';
-    } else {
-        echo'
-            <a class="login" href="/login">Login</a>
-            <a class="signup" href="/sign-up">Sign Up</a>
-            <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>';
-    }
-?>    
+<span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>
         </nav>
     </header>
 <?php    
@@ -94,7 +77,7 @@
     <article class="full">
         <section class="intro_masthead">
             <div class="inner">
-                <img src="/wp-content/themes/caring/images/conversations_text.png" alt="Genius of Caring Conversations">
+                <img src="/wp-content/themes/caring2024/images/conversations_text.png" alt="Genius of Caring Conversations">
                 <a class="block" href="/conversations/alzheimers-family">
                     <h1>Family</h1>
                     <p>As the holiday season draws near, we’re discussing the topic of family. Whether we’re related by blood or connected through shared experiences, ‘family’ are the people who support and love us. How has your family impacted your experience as a caregiver? How do family gatherings around the holiday season affect your loved one?<br><span class="link">Read More...</span></p>

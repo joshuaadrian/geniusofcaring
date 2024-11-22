@@ -1,0 +1,14 @@
+{
+    "name": "acf/map",
+    "title": "Map",
+    "description": "A custom map block.",
+    "style": [ "file:./map.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["locations", "map"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "map.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,111 @@
+.locations {
+
+	&--filters {
+
+		padding:0 0 60px;
+
+		@media(min-width:$screen-lg-min) {
+			display: flex;
+			flex-flow:row nowrap;
+		}
+
+		h2 {
+			flex:0;
+			color:$blue-400;
+		}
+
+	}
+
+	&--dropdowns {
+
+		flex:1;
+		display: flex;
+		flex-flow: row wrap;
+
+		@media(min-width:$screen-lg-min) {
+			flex-flow: row nowrap;
+			justify-content: flex-end;
+		}
+
+	}
+
+	&--dropdown--wrap {
+
+	    flex:1 0 100%;
+	    max-width: 100%;
+	    margin:15px 0 0;
+	    display: flex;
+	    flex-flow: row nowrap;
+	    align-items: center;
+
+	    @media(min-width:$screen-lg-min) {
+	    	margin:0 0 0 30px;
+	    	flex:1 0 300px;
+	    	max-width: 300px;
+	    }
+
+	    .selectric-wrapper {
+	      flex:1;
+	    }
+
+	    label {
+	      text-transform: uppercase;
+		  font-size: 16px;
+		  line-height: 24px;
+		  font-weight: 500;
+		  margin: 0 10px 0 0;
+	      color:$blue-400;
+	    }
+	}
+
+	&--grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap:60px;
+
+		@media(min-width:$screen-sm-min) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media(min-width:$screen-lg-min) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	&--item {
+
+		&.is-hiding {
+	      display: none;
+	    }
+
+	    &--name {
+	    	margin:0 0 10px;
+	    	color:$blue-400;
+	    }
+
+	    &--address {
+	    	margin:0;
+	    	color:$blue-400;
+	    }
+
+	    &--phone {
+	    	margin:0;
+	    	color:$blue-400;
+
+	    	a {
+	    		color:$blue-400;
+	    	}
+	    }
+
+	    &--businesses {
+	    	margin:20px;
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 500;
+			margin: 15px 0 0 0;
+			color:$gray-500;
+	    }
+
+	}
+
+}

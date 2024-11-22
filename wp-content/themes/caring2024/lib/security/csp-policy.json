@@ -46,10 +46,10 @@
 	},
 	"img-src": {
 		"allow": [
-			"*.strongersouthwest.com",
-			"https://strongersouthwest.com",
-			"https://dev-ell-redeye.pantheonsite.io",
-			"https://test-ell-redeye.pantheonsite.io",
+			"*.geniusofcaring.com",
+			"https://geniusofcaring.com",
+			"*.geniusofcaring.test",
+			"https://geniusofcaring.test",
 			"https://*.googletagmanager.com",
 			"https://*.google-analytics.com",
 			"https://*.gstatic.com",

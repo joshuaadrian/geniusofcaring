@@ -280,7 +280,7 @@ blockquote p {
 }
 
 .page-template-custom-portrait-php .page_header {
-    opacity: 0.2;
+/*    opacity: 0.2;*/
 }
 
 .page-template-custom-care_gallery-php .page_header {
@@ -712,7 +712,6 @@ body.page-template-custom-portrait-php #Chapter_One_Video {
 }
 
 section.portraits {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -1034,36 +1033,6 @@ button.skip:hover {
     text-transform: uppercase;
 }
 
-.page-template-custom-care_gallery-php article ul.filter li.switch form {
-    float: right;
-    margin: 0;
-}
-
-.page-template-custom-care_gallery-php article ul.filter.open li.switch form {
-    float: right;
-}
-
-.page-template-custom-care_gallery-php article ul.filter.open li.switch form input {
-    border-color: transparent;
-}
-
-.page-template-custom-care_gallery-php article ul.filter li.switch form input {
-    border-color: transparent;
-    width: 400px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 0 !important;
-    height: 55px;
-}
-
-.page-template-custom-care_gallery-php article ul.filter li.switch form input:hover,
-.page-template-custom-care_gallery-php article ul.filter li.switch form input:active,
-.page-template-custom-care_gallery-php article ul.filter li.switch form input:focus {
-    background: none repeat scroll 98% 50% rgba(255, 255, 255, 0.6);
-    border: 0 !important;
-}
-
 .page-template-custom-care_gallery-php article ul.filter li:hover {
     background: rgba(250, 104, 95, 1);
     border-radius: 0;
@@ -1071,10 +1040,11 @@ button.skip:hover {
 
 .page-template-custom-care_gallery-php article ul.filter li.switch {
     background: rgba(250, 104, 95, 1);
-    height: 75px;
     text-align: left;
     font-size: 12px;
-    line-height: 60px;
+
+    height: 40px;
+    line-height: 22px;
 }
 
 .page-template-custom-care_gallery-php article ul.gallery {
@@ -3260,12 +3230,11 @@ border-radius: 3px;
 }
 
 .page-template-custom-kamaria .page_header {
-    opacity: 0.2;
+/*    opacity: 0.2;*/
 }
 
 body.page-template-custom-kamaria {
     background: #201e29;
-    padding: 0;
     position:relative;
 }
 
@@ -3449,12 +3418,11 @@ body.page-template-custom-kamaria  .chapters_nav {
 
 
 .page-template-custom-pamed .page_header {
-    opacity: 0.2;
+/*    opacity: 0.2;*/
 }
 
 body.page-template-custom-pamed {
     background: #201e29;
-    padding: 0;
     position:relative;
 }
 
@@ -3655,7 +3623,7 @@ body.page-template-custom-featuretest {
     opacity:0;
 }
 .page-template-custom-featuretest article ul.filter.show {
-    height:75px;
+    height:40px;
     opacity:1;
 }
 
@@ -3841,10 +3809,10 @@ body.page-template-custom-featuretest {
 
 .page-template-custom-featuretest article ul.filter li.switch {
     background: rgba(250, 104, 95, 1);
-    height: 75px;
+    height: 40px;
     text-align: left;
     font-size: 12px;
-    line-height: 60px;
+    line-height: 22px;
 }
 
 .page-template-custom-featuretest article ul.gallery {
@@ -4048,14 +4016,14 @@ body.page-template-custom-home {
     opacity:0;
 }
 .page-template-custom-home article ul.filter.show {
-    height:75px;
+    height:40px;
     opacity:1;
 }
 
 .page-template-custom-home article .featured_carousel {
-    height: calc(85vh - 80px);
+    height: calc(85vh - 120px);
     position: fixed;
-    top: 80px;
+    top: 120px;
     width: 100vw;
     background:url(images/featured_bg_30p.jpg) no-repeat center center / cover;
 }
@@ -4234,10 +4202,10 @@ body.page-template-custom-home {
 
 .page-template-custom-home article ul.filter li.switch {
     background: rgba(250, 104, 95, 1);
-    height: 75px;
+    height: 40px;
     text-align: left;
     font-size: 12px;
-    line-height: 60px;
+    line-height: 22px;
 }
 
 .page-template-custom-home article ul.gallery {

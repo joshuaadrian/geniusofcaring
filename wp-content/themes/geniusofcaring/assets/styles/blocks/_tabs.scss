@@ -1,0 +1,111 @@
+.tabs {
+
+	&--links {
+		display: flex;
+		flex-flow:row wrap;
+		justify-content: space-between;
+		grid-gap: 60px;
+		gap:60px;
+	}
+
+	&--link {
+
+		padding:0;
+		text-align: center;
+		position: relative;
+		flex:1 0 calc(50% - 30px);
+		max-width: calc(50% - 30px);
+
+		@media(min-width:$screen-md-min) {
+			flex:1;
+			max-width: 1000px;
+		}
+
+		&:after {
+			content:'';
+			position: absolute;
+			height:16px;
+			width:16px;
+			bottom:0;
+			left:50%;
+			margin-left:-8px;
+			rotate:0deg;
+			background:url(../images/icons/caret-down-blue-400.svg) center center / 100% auto no-repeat transparent;
+		}
+
+		&.is-showing {
+
+			&:after {
+				rotate:180deg;
+			}
+
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+			color:$blue-400;
+			font-size:16px;
+			font-weight: 500;
+			text-transform: uppercase;
+			padding:0 0 20px;
+			border-bottom: 2px solid transparent;
+			align-self: center;
+			height:110px;
+			display: flex;
+
+			&:hover {
+
+			}
+
+			img {
+				width:auto;
+				max-height:80px;
+				display: block;
+				margin: 0 auto;
+			}
+
+		}
+
+	}
+
+}
+
+.tab-content-close {
+	position: absolute;
+	top:37px;
+	right:0;
+	cursor: pointer;
+	z-index: 4;
+	display: block;
+	font-size: 42px;
+	line-height: 1;
+	font-weight: 300;
+	color:$blue-400;
+}
+
+.wp-block-group {
+
+	&.tab-content {
+
+		display: none;
+		padding:45px 0 0 !important;
+		position: relative;
+
+		&.is-showing {
+			display: block;
+		}
+
+		.wp-block-group__inner-container > *:first-child {
+			margin-top:0;
+			padding-right:45px;
+		}
+
+		> * {
+			max-width: 9999px;
+		}
+
+	}
+
+}
+

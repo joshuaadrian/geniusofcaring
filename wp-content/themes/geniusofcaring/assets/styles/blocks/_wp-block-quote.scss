@@ -1,0 +1,82 @@
+.wp-block-quote {
+
+  margin:0 auto;
+  border:none;
+  border-radius: 6px;
+  padding:60px 20px 60px 110px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.35);
+  background:url('../images/background-secondary.jpg') right center / cover no-repeat $blue-400;
+
+  @media(min-width:$screen-xl-min) {
+    padding:60px 180px 60px 240px;
+  }
+
+  &:before {
+    content:'';
+    position: absolute;
+    top:50%;
+    left:20px;
+    width: 50px;
+    height: 75px;
+    transform: translateY(-80%);
+    background:url('../images/quotes-graphic.png') center / contain no-repeat transparent;
+
+    @media(min-width:$screen-xl-min) {
+      left:50px;
+      width: 90px;
+    }
+
+  }
+
+  &:after {
+    content:'';
+    width:1px;
+    height:calc(100% - 120px);
+    top:60px;
+    left:90px;
+    background:$blue-400;
+    position: absolute;
+
+    @media(min-width:$screen-xl-min) {
+      left:190px;
+    }
+
+  }
+
+  p {
+    display: block;
+    font-size: clamp(20px, 3vw, 36px);
+    margin:0 0 20px;
+    line-height: 1.05;
+    color:$white;
+
+    strong {
+      color:$blue-400;
+      font-weight:700;
+    }
+
+    s {
+      text-decoration: underline;
+    }
+
+  }
+
+  cite {
+
+    padding:0;
+    margin:30px 0 0;
+    position: relative;
+    color:$pink-400;
+    font-weight: 600;
+
+    &:before {
+      content:'\2014';
+      margin:0 8px 0 0;
+    }
+
+
+  }
+
+}

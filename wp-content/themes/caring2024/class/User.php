@@ -137,7 +137,7 @@ class User {
         $results = $statement->fetch(PDO::FETCH_ASSOC);
         $this->user_photo = $results['photo'];
         if($this->user_photo==''){
-            $this->user_photo = '/wp-content/themes/caring/images/defaults/profile.png';
+            $this->user_photo = '/wp-content/themes/caring2024/images/defaults/profile.png';
         }
         $this->user_name = $results['name'];
         $this->user_type = $results['user_type'];
@@ -304,7 +304,7 @@ class User {
     }
 
     public function get_profile_image(){
-        return '/wp-content/themes/caring/images/defaults/profile.jpg';
+        return '/wp-content/themes/caring2024/images/defaults/profile.jpg';
     }
 
     public function get_answers(){

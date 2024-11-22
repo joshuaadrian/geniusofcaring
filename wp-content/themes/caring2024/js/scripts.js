@@ -354,23 +354,23 @@ function gallery_functions(){
 
 }
 
-function hide_header(){
-    if(!$('.page_header').is(':hover')){
-        $('.page_header').css({'opacity':'0.2'});
-        $('.chapter_display').css({'opacity':'0.2'});
-        $('.video_controls').css({'opacity':'0'});
-    }
-}
+// function hide_header(){
+//     if(!$('.page_header').is(':hover')){
+//         $('.page_header').css({'opacity':'0.2'});
+//         $('.chapter_display').css({'opacity':'0.2'});
+//         $('.video_controls').css({'opacity':'0'});
+//     }
+// }
 
-function hide_header_new(){
-    if(!$('.page_header').is(':hover')){
-        $('.page_header').css({'opacity':'0'});
-        $('.chapter_display').css({'opacity':'0'});
-        $('.video_controls').css({'opacity':'0'});
-        $('.chapters_nav').css({'opacity':'0'});
-        $('.need_help_button').css({'opacity':'0'});
-    }
-}
+// function hide_header_new(){
+//     if(!$('.page_header').is(':hover')){
+//         $('.page_header').css({'opacity':'0'});
+//         $('.chapter_display').css({'opacity':'0'});
+//         $('.video_controls').css({'opacity':'0'});
+//         $('.chapters_nav').css({'opacity':'0'});
+//         $('.need_help_button').css({'opacity':'0'});
+//     }
+// }
 
 function global_functions(){
 	$('.social_button').click(function(){
@@ -671,169 +671,169 @@ function formatTime(seconds) {
 }
   
   
-function portrait_functions(){
-    var timer;
-    $('body').mousemove(function() {
-        $('.page_header').css({'opacity':'1'});
-        $('.chapter_display').css({'opacity':'1'});
-        $('.video_controls').css({'opacity':'1'});
-        clearTimeout (timer);
-        timer = setTimeout(hide_header, 2000);
-    })
-	if($('body').hasClass('page-id-351')){  //Pam and Ed
-        chapter_one();
-    } else {
-        portrait_selection();
-    }
+// function portrait_functions(){
+//     var timer;
+//     $('body').mousemove(function() {
+//         $('.page_header').css({'opacity':'1'});
+//         $('.chapter_display').css({'opacity':'1'});
+//         $('.video_controls').css({'opacity':'1'});
+//         clearTimeout (timer);
+//         timer = setTimeout(hide_header, 2000);
+//     })
+// 	if($('body').hasClass('page-id-351')){  //Pam and Ed
+//         chapter_one();
+//     } else {
+//         portrait_selection();
+//     }
 
-    $('.chapters_nav .heading').click(function(){
-        if($(this).hasClass('open')){
-            $(this).removeClass('open').addClass('closed');
-            $('.chapters_nav').animate({'height':'70px'},400);
-        } else {
-            $(this).removeClass('closed').addClass('open');
-            $('.chapters_nav').animate({'height':'425px'},400,function(){
-                $("html, body").animate({ scrollTop: $(document).height() }, "slow");
-            });
-        }
-    })
+//     $('.chapters_nav .heading').click(function(){
+//         if($(this).hasClass('open')){
+//             $(this).removeClass('open').addClass('closed');
+//             $('.chapters_nav').animate({'height':'70px'},400);
+//         } else {
+//             $(this).removeClass('closed').addClass('open');
+//             $('.chapters_nav').animate({'height':'425px'},400,function(){
+//                 $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+//             });
+//         }
+//     })
 
-    $('.chapters_nav li').click(function(){
-        if($(this).hasClass('heading')){
-            return false;
-        }
-        if($(this).hasClass('active')){
-            return false;
-        }
-        pausePlayers();
-        $('video').hide();
-        $('section.response').hide();
-        $('.chapters_nav li').removeClass('active');
-        var chapter = $(this).attr('class');
-        switch(chapter){
-            case 'one':
-                $('.chapters_nav li.one').addClass('active');
-                chapter_one();
-                break;
-            case 'two':
-                $('.chapters_nav li.two').addClass('active');
-                chapter_two();
-                break;
-            case 'three':
-                $('.chapters_nav li.three').addClass('active');
-                chapter_three();
-                break;
-            case 'four':
-                $('.chapters_nav li.four').addClass('active');
-                chapter_four();
-                break;
-            case 'five':
-                $('.chapters_nav li.five').addClass('active');
-                chapter_five();
-                break;
-        }
-        $('.chapters_nav .heading').click();
-        $("html, body").animate({ scrollTop: 0 }, "fast");
-    }) 
+//     $('.chapters_nav li').click(function(){
+//         if($(this).hasClass('heading')){
+//             return false;
+//         }
+//         if($(this).hasClass('active')){
+//             return false;
+//         }
+//         pausePlayers();
+//         $('video').hide();
+//         $('section.response').hide();
+//         $('.chapters_nav li').removeClass('active');
+//         var chapter = $(this).attr('class');
+//         switch(chapter){
+//             case 'one':
+//                 $('.chapters_nav li.one').addClass('active');
+//                 chapter_one();
+//                 break;
+//             case 'two':
+//                 $('.chapters_nav li.two').addClass('active');
+//                 chapter_two();
+//                 break;
+//             case 'three':
+//                 $('.chapters_nav li.three').addClass('active');
+//                 chapter_three();
+//                 break;
+//             case 'four':
+//                 $('.chapters_nav li.four').addClass('active');
+//                 chapter_four();
+//                 break;
+//             case 'five':
+//                 $('.chapters_nav li.five').addClass('active');
+//                 chapter_five();
+//                 break;
+//         }
+//         $('.chapters_nav .heading').click();
+//         $("html, body").animate({ scrollTop: 0 }, "fast");
+//     }) 
 
-	$('.play_pause').click(function(){
-		var this_video = $('video.active').attr('id');
-		var video_element = document.getElementById(this_video)
-		if($(this).hasClass('play')){
-            $(this).removeClass('play').addClass('pause');
-            video_element.play();
-		} else {
-            $(this).removeClass('pause').addClass('play');
-			video_element.pause();
-		}
-	})
+// 	$('.play_pause').click(function(){
+// 		var this_video = $('video.active').attr('id');
+// 		var video_element = document.getElementById(this_video)
+// 		if($(this).hasClass('play')){
+//             $(this).removeClass('play').addClass('pause');
+//             video_element.play();
+// 		} else {
+//             $(this).removeClass('pause').addClass('play');
+// 			video_element.pause();
+// 		}
+// 	})
     
-	$('.mute_button').click(function(){
-		var this_video = $('video.active').attr('id');
-		var video_element = document.getElementById(this_video)
-		if($(this).hasClass('mute_off')){
-			$(this).removeClass('mute_off').addClass('mute_on').data('volume',video_element.volume);
-			video_element.volume = 0;
-            $( '.volume_slider' ).slider( 'option', 'value',0 );
-		} else {
-			$(this).removeClass('mute_on').addClass('mute_off');
-			video_element.volume = $(this).data('volume');
-            $( '.volume_slider' ).slider( 'option', 'value' , $(this).data('volume') * 100);
-		}
-	})
-var video_time;    
-	$('.hd_sd').click(function(){
-		var this_video = $('video.active').attr('id');
-		var video_element = document.getElementById(this_video)
-		video_element.pause();
-		video_time = video_element.currentTime;		
-		$('video.active').hide();
-		if($(this).hasClass('sd_on')){
-            $('section.video_container').removeClass('hd_off').addClass('hd_on');
-			$(this).removeClass('sd_on').addClass('hd_on');
-            var video_id = this_video.substr(0, this_video.length-3);
-		} else {
-            $('section.video_container').addClass('hd_off').removeClass('hd_on');
-			$(this).removeClass('hd_on').addClass('sd_on');
-            var video_id = this_video+'_SD';
-		}
-        switch(this_video){
-            case 'Chapter_One_Video':
-            case 'Chapter_One_Video_SD':
-                chapter_one(video_time);
-                break;
-            case 'Chapter_Two_Video':
-            case 'Chapter_Two_Video_SD':
-                chapter_two(video_time);
-                break;
-            case 'Chapter_Three_Video':
-            case 'Chapter_Three_Video_SD':
-                chapter_three(video_time);
-                break;
-            case 'Chapter_Four_Video':
-            case 'Chapter_Four_Video_SD':
-                chapter_four(video_time);
-                break;
-            case 'Chapter_Five_Video':
-            case 'Chapter_Five_Video_SD':
-                chapter_five(video_time);
-                break;
-        }
-	})
+// 	$('.mute_button').click(function(){
+// 		var this_video = $('video.active').attr('id');
+// 		var video_element = document.getElementById(this_video)
+// 		if($(this).hasClass('mute_off')){
+// 			$(this).removeClass('mute_off').addClass('mute_on').data('volume',video_element.volume);
+// 			video_element.volume = 0;
+//             $( '.volume_slider' ).slider( 'option', 'value',0 );
+// 		} else {
+// 			$(this).removeClass('mute_on').addClass('mute_off');
+// 			video_element.volume = $(this).data('volume');
+//             $( '.volume_slider' ).slider( 'option', 'value' , $(this).data('volume') * 100);
+// 		}
+// 	})
+// var video_time;    
+// 	$('.hd_sd').click(function(){
+// 		var this_video = $('video.active').attr('id');
+// 		var video_element = document.getElementById(this_video)
+// 		video_element.pause();
+// 		video_time = video_element.currentTime;		
+// 		$('video.active').hide();
+// 		if($(this).hasClass('sd_on')){
+//             $('section.video_container').removeClass('hd_off').addClass('hd_on');
+// 			$(this).removeClass('sd_on').addClass('hd_on');
+//             var video_id = this_video.substr(0, this_video.length-3);
+// 		} else {
+//             $('section.video_container').addClass('hd_off').removeClass('hd_on');
+// 			$(this).removeClass('hd_on').addClass('sd_on');
+//             var video_id = this_video+'_SD';
+// 		}
+//         switch(this_video){
+//             case 'Chapter_One_Video':
+//             case 'Chapter_One_Video_SD':
+//                 chapter_one(video_time);
+//                 break;
+//             case 'Chapter_Two_Video':
+//             case 'Chapter_Two_Video_SD':
+//                 chapter_two(video_time);
+//                 break;
+//             case 'Chapter_Three_Video':
+//             case 'Chapter_Three_Video_SD':
+//                 chapter_three(video_time);
+//                 break;
+//             case 'Chapter_Four_Video':
+//             case 'Chapter_Four_Video_SD':
+//                 chapter_four(video_time);
+//                 break;
+//             case 'Chapter_Five_Video':
+//             case 'Chapter_Five_Video_SD':
+//                 chapter_five(video_time);
+//                 break;
+//         }
+// 	})
     
-	 $( ".seek_bar" ).slider({
-		value: 0,
-        min: 10,
-        max: 1000,
-		orientation: "horizontal",
-		range: "min",
-		animate: true,
-		start: function( event, ui ) {
-			var this_video = $('video.active').attr('id');
-			var video_element = document.getElementById(this_video);
-			video_element.pause();
-			$('span.play_pause').removeClass('play').addClass('pause');
-			video_element.removeEventListener("timeupdate", video_event_listener );
-		},
-		change: function(event, ui) {
-			if (event.originalEvent) {
-				//manual change
-				video_seek_change();
-			}
-		}
-	});
-	 $( ".volume_slider" ).slider({
-		value: 100,
-		orientation: "horizontal",
-		range: "min",
-		animate: true,
-		change: function( event, ui ) {video_volume_change()},
-	});
+// 	 $( ".seek_bar" ).slider({
+// 		value: 0,
+//         min: 10,
+//         max: 1000,
+// 		orientation: "horizontal",
+// 		range: "min",
+// 		animate: true,
+// 		start: function( event, ui ) {
+// 			var this_video = $('video.active').attr('id');
+// 			var video_element = document.getElementById(this_video);
+// 			video_element.pause();
+// 			$('span.play_pause').removeClass('play').addClass('pause');
+// 			video_element.removeEventListener("timeupdate", video_event_listener );
+// 		},
+// 		change: function(event, ui) {
+// 			if (event.originalEvent) {
+// 				//manual change
+// 				video_seek_change();
+// 			}
+// 		}
+// 	});
+// 	 $( ".volume_slider" ).slider({
+// 		value: 100,
+// 		orientation: "horizontal",
+// 		range: "min",
+// 		animate: true,
+// 		change: function( event, ui ) {video_volume_change()},
+// 	});
 
-    var $handle_time_popup = $("<span/>").text("0:00").addClass('handle_time_pop');
-    $(".seek_bar").slider().find(".ui-slider-handle").append($handle_time_popup)
+//     var $handle_time_popup = $("<span/>").text("0:00").addClass('handle_time_pop');
+//     $(".seek_bar").slider().find(".ui-slider-handle").append($handle_time_popup)
     
-}
+// }
 
 function video_seek_change(){
     var this_video = $('video.active').attr('id');
@@ -1037,13 +1037,13 @@ $(document).ready(function(){
 		default_functions();
 	}
 
-	if($('body').hasClass('page-template-custom-my_story-php')){
-		my_story_functions();
-	}
+	// if($('body').hasClass('page-template-custom-my_story-php')){
+	// 	my_story_functions();
+	// }
 
-	if($('body').hasClass('page-template-custom-portrait-php')){
-		portrait_functions();
-	}
+	// if($('body').hasClass('page-template-custom-portrait-php')){
+	// 	portrait_functions();
+	// }
 
 	if($('body').hasClass('page-template-custom-home-php')){
 		home_functions();
@@ -1054,18 +1054,18 @@ $(document).ready(function(){
     if($('body').hasClass('page-template-custom-featuretest')){
         testfeature_functions();
     }
-	if($('body').hasClass('page-template-custom-login-php')){
-		login_functions();
-	}
- 	if($('body').hasClass('page-template-custom-conversations-php')){
-		conversation_functions();
-	}
-    if($('body').hasClass('page-template-custom-kamaria')){
-        kamaria_functions();
-    }
-    if($('body').hasClass('page-template-custom-pamed')){
-        pamed_functions();
-    }
+	// if($('body').hasClass('page-template-custom-login-php')){
+	// 	login_functions();
+	// }
+ 	// if($('body').hasClass('page-template-custom-conversations-php')){
+	// 	conversation_functions();
+	// }
+    // if($('body').hasClass('page-template-custom-kamaria')){
+    //     kamaria_functions();
+    // }
+    // if($('body').hasClass('page-template-custom-pamed')){
+    //     pamed_functions();
+    // }
     if(!($('body').hasClass('page-template-custom-kamaria') || $('body').hasClass('page-template-custom-portrait'))){
         launch_roadblock();
     }
@@ -1818,19 +1818,19 @@ function NewScrollHandler(e) {
         return false;
     }
     //throttle event:
-    clearTimeout(_throttleTimer);
-    _throttleTimer = setTimeout(function () {
-        //do work
-        if ($window.scrollTop() + $window.height() > $document.height() - 300) {
-            NewLoadMore();
-        }
-        if ($window.scrollTop() >= ($(window).height() - 200)) {
-            $('.filter').addClass('show');
-        } else {
-            $('.filter').removeClass('show');
-        }
+    // clearTimeout(_throttleTimer);
+    // _throttleTimer = setTimeout(function () {
+    //     //do work
+    //     if ($window.scrollTop() + $window.height() > $document.height() - 300) {
+    //         NewLoadMore();
+    //     }
+    //     if ($window.scrollTop() >= ($(window).height() - 200)) {
+    //         $('.filter').addClass('show');
+    //     } else {
+    //         $('.filter').removeClass('show');
+    //     }
 
-    }, _throttleDelay);
+    // }, _throttleDelay);
 }
 
 function NewLoadMore(){

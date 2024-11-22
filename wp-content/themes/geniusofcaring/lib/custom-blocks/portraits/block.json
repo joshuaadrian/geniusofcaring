@@ -1,0 +1,14 @@
+{
+    "name": "acf/portraits",
+    "title": "Portraits",
+    "description": "A custom portraits block.",
+    "style": [ "file:./portraits.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["portraits"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "portraits.php"
+    },
+    "align": "full"
+}

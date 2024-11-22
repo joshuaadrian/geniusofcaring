@@ -1,0 +1,84 @@
+.link-list-block {
+
+  @media(min-width:$screen-lg-min) {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .link-list--links {
+
+    ul {
+      list-style-type: none;
+      margin:0;
+      padding:0;
+      border-top:1px solid #c0c0c0;
+    }
+
+    li {
+      margin:0;
+      padding:0;
+      cursor: pointer;
+    }
+
+    a {
+
+      display: block;
+      border-bottom:1px solid #c0c0c0;
+      padding:20px 90px 20px 0;
+      font-size: 20px;
+      text-decoration: none;
+      color:$blue-400;
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: 18px auto;
+      cursor: pointer;
+
+      @media(min-width:$screen-lg-min) {
+        padding:30px 90px 30px 0;
+        background-size: 24px auto;
+        font-size: 22px;
+      }
+
+      small {
+        font-size: 16px;
+      }
+
+      &.is-showing {
+        color:$black;
+        background-image:url(../images/icons/caret-down-black.svg);
+
+        @media(min-width:$screen-lg-min) {
+          background-image:url(../images/icons/arrow-right-black.svg);
+        }
+      }
+
+    }
+
+  }
+
+  .link-list--content {
+
+    margin:30px 0 0;
+
+    @media(min-width:$screen-lg-min) {
+      flex:1;
+      margin:0 0 0 90px;
+    }
+
+  }
+
+  .link-list--copy {
+
+    display: none;
+
+    > *:first-child {
+      margin-top:0;
+    }
+
+    &.is-showing {
+      display: block;
+    }
+
+  }
+
+}

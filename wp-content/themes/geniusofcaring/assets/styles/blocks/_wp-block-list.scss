@@ -1,0 +1,102 @@
+.wp-block-list {
+
+	&.arrow-list {
+
+		display: flex;
+		flex-flow: row wrap;
+		list-style-type: none;
+		margin:0;
+		padding:0;
+		gap:30px;
+
+		&.arrows-down {
+
+			li:after {
+				transform:rotate(0deg);
+			}
+
+		}
+
+		@for $i from 1 through length($colors) {
+
+			$color       : nth( nth( $colors, $i ), 2 );
+			$color_name  : nth( nth( $colors, $i ), 1 );
+
+			&.has-#{$color_name}-background {
+
+				li {
+					background-color: $color;
+				}
+
+			}
+
+			&.has-#{$color_name}-text {
+
+				li {
+					color: $color;
+				}
+
+			}
+
+		}
+
+		li {
+
+			flex:1 0 100%;
+			margin:0;
+			border-radius: 6px;
+			background-color: $white;
+			color:$blue-400;
+			padding:20px 20px 20px 100px;
+			font-weight: 600;
+			overflow: hidden;
+			position: relative;
+			display: flex;
+			flex-flow:column wrap;
+			justify-content: center;
+
+			@media(min-width:$screen-sm-min) {
+				flex:1 0 calc(50% - 15px);
+				max-width: calc(50% - 15px);
+			}
+
+			@media(min-width:$screen-xl-min) {
+				flex:1 0 calc(33.333% - 20px);
+				max-width: calc(33.333% - 15px);
+			}
+
+			&:before {
+				content:'';
+				background: $pink-400;
+				width:80px;
+				height:100%;
+				position: absolute;
+				top:0;
+				left:0;
+			}
+
+			&:after {
+				content:'';
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 30px auto;
+				background-image:url(../images/icon-arrow.png);
+				width:80px;
+				height:100%;
+				transform:rotate(-90deg);
+				position: absolute;
+				top:0;
+				left:0;
+			}
+
+			+ li {
+
+
+
+			}
+
+		}
+
+	}
+
+}

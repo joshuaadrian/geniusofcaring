@@ -1,0 +1,375 @@
+.wp-block-group {
+
+	padding-left:20px;
+	padding-right:20px;
+	position: relative;
+
+	@media(min-width:$screen-md-min) {
+		padding-left:50px;
+		padding-right:50px;
+	}
+
+	@media(min-width:$screen-lg-min) {
+		padding-left:60px;
+		padding-right:60px;
+	}
+
+	@media(min-width:$screen-xl-min) {
+		padding-left:80px;
+		padding-right:80px;
+	}
+
+	.wp-block-group {
+
+		padding-left:0px;
+		padding-right:0px;
+
+	}
+
+	&.full-width {
+
+		padding-left:0px;
+		padding-right:0px;
+
+		@media(min-width:$screen-md-min) {
+			padding-left:0px;
+			padding-right:0px;
+		}
+
+		@media(min-width:$screen-lg-min) {
+			padding-left:0px;
+			padding-right:0px;
+		}
+
+		@media(min-width:$screen-xl-min) {
+			padding-left:0px;
+			padding-right:0px;
+		}
+
+		@media(min-width:$screen-xxl-min) {
+			padding-left:0px;
+			padding-right:0px;
+		}
+
+		> .wp-block-group__inner-container {
+      max-width: 4000px;
+    }
+
+    .wp-block-group {
+
+			padding-left:20px;
+			padding-right:20px;
+
+			@media(min-width:$screen-md-min) {
+				padding-left:50px;
+				padding-right:50px;
+			}
+
+			@media(min-width:$screen-lg-min) {
+				padding-left:60px;
+				padding-right:60px;
+			}
+
+			@media(min-width:$screen-xl-min) {
+				padding-left:80px;
+				padding-right:80px;
+			}
+
+		}
+
+	}
+
+	&.blue-line-center {
+
+		position: relative;
+		z-index: 3;
+
+		&:after {
+			
+
+			@media(min-width:$screen-lg-min) {
+				content:'';
+				width:1px;
+				background: $blue-400;
+				left:50%;
+				position: absolute;
+				height:150px;
+				top:-75px;
+			}
+		}
+
+	}
+
+	&.background-red {
+
+		background-image:url(../images/background-red.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .wp-block-group__inner-container {
+    	position: relative;
+    	z-index: 2;
+    }
+  }
+
+	&.background-triangles-bottom-left {
+
+		overflow: hidden;
+
+		&:after {
+
+			@media(min-width:$screen-lg-min) {
+		    background-image:url(../images/background-triangles-bottom-left.jpg);
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    z-index: 1;
+		    position: absolute;
+		    right:20%;
+		    content:'';
+		    top:0;
+		    bottom:0;
+		    left:0;
+		   }
+	  }
+
+    .wp-block-group__inner-container {
+    	position: relative;
+    	z-index: 2;
+    }
+  }
+
+  &.background-triangles-bottom-right {
+
+		overflow: hidden;
+
+		&:after {
+
+			@media(min-width:$screen-lg-min) {
+		    background-image:url(../images/background-triangles-bottom-right.jpg);
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    z-index: 1;
+		    position: absolute;
+		    left:50%;
+		    content:'';
+		    top:0;
+		    bottom:0;
+		    right:0;
+		   }
+	  }
+
+    .wp-block-group__inner-container {
+    	position: relative;
+    	z-index: 2;
+    }
+  }
+
+	&.background-waves-white {
+
+		overflow: hidden;
+
+		&:before {
+	    background-image:url(../images/pattern-waves-bottom-right.jpg);
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    z-index: 1;
+	    position: absolute;
+	    bottom:0;
+	    right:0;
+	    content:'';
+	    height:400px;
+	    width:400px;
+	  }
+
+    .wp-block-group__inner-container {
+    	position: relative;
+    	z-index: 2;
+    }
+  }
+
+  &.background-waves-gray-bottom-left {
+
+		overflow: hidden;
+
+		&:after {
+	    background-image: url(../images/background-waves-gray.jpg);
+	    background-position: bottom left;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    z-index: 1;
+	    position: absolute;
+	    bottom:0;
+	    left:0;
+	    top:0;
+	    content:'';
+	    width:500px;
+	  }
+
+    .wp-block-group__inner-container {
+    	position: relative;
+    	z-index: 2;
+    }
+  }
+
+  &.background-waves-white-bottom-left {
+
+		overflow: hidden;
+
+		&:after {
+	    background-image: url(../images/background-waves-white.jpg);
+	    background-position: bottom left;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    z-index: 1;
+	    position: absolute;
+	    bottom:0;
+	    left:0;
+	    top:0;
+	    content:'';
+	    width:500px;
+	  }
+
+    .wp-block-group__inner-container {
+    	position: relative;
+    	z-index: 2;
+    }
+  }
+
+  &.background-waves-gray {
+
+		overflow: hidden;
+
+		&:before {
+	    background-image:url(../images/pattern-waves-bottom-right-gray.jpg);
+	    background-position: bottom right;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    z-index: 1;
+	    position: absolute;
+	    bottom:0;
+	    right:0;
+	    content:'';
+	    height:400px;
+	    width:400px;
+	  }
+
+    .wp-block-group__inner-container {
+    	position: relative;
+    	z-index: 2;
+    }
+  }
+
+  &.flex {
+
+    .wp-block-group__inner-container {
+      display: flex;
+      flex-flow:row nowrap;
+    }
+
+  }
+
+  &.justify-center {
+
+    .wp-block-group__inner-container {
+      justify-content: center;
+
+      > * {
+        margin-left:15px;
+        margin-right:15px;
+      }
+
+    }
+
+  }
+
+  &.align-center {
+
+    .wp-block-group__inner-container {
+      align-items: center;
+      align-content:center;
+    }
+
+  }
+
+  .wp-block-group__inner-container {
+    max-width: 1500px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  &.narrow {
+
+    .wp-block-group__inner-container {
+    	max-width:1100px;
+  	}
+
+  }
+
+  &.narrower {
+
+    .wp-block-group__inner-container {
+    	max-width:900px;
+  	}
+
+  }
+
+  &.narrowest {
+
+    .wp-block-group__inner-container {
+    	max-width:700px;
+  	}
+
+  }
+
+	@for $i from 1 through length($colors) {
+
+		$color       : nth( nth( $colors, $i ), 2 );
+		$color_name  : nth( nth( $colors, $i ), 1 );
+
+		&.top-half-#{$color_name} {
+
+			position: relative;
+
+			&:before {
+				content:'';
+				z-index: 1;
+				position: absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:50%;
+				background:$color;
+			}
+
+		}
+
+		&.bottom-half-#{$color_name} {
+
+			position: relative;
+
+			&:after {
+				content:'';
+				z-index: 1;
+				position: absolute;
+				bottom:0;
+				left:0;
+				right:0;
+				top:50%;
+				background:$color;
+			}
+
+		}
+
+		.wp-block-group__inner-container {
+			position: relative;
+			z-index: 2;
+		}
+
+	}
+
+}

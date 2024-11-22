@@ -41,8 +41,8 @@
 				$link = $result['user_url'];
 			}
             $user_image = $result['photo'];
-            if($user_image == '/wp-content/themes/caring/images/profile_add_image_bttn.png' || $user_image == '/wp-content/themes/caring/images/defaults/profile.png' || $user_image == ''){
-                $user_image = '/wp-content/themes/caring/images/defaults/user_icon.png';
+            if($user_image == '/wp-content/themes/caring2024/images/profile_add_image_bttn.png' || $user_image == '/wp-content/themes/caring2024/images/defaults/profile.png' || $user_image == ''){
+                $user_image = '/wp-content/themes/caring2024/images/defaults/user_icon.png';
             }
 			echo'
                 <div class="search-result">

@@ -1,4 +1,4 @@
-    <h1>Sign the Guestbook</h1>
+    
     <div class="fb-comments" data-href="http://geniusofcaring.wpengine.com/care-gallery/<?php echo $user_id ?>" data-numposts="5"></div>
     <script type="text/javascript">
         FB.XFBML.parse();

@@ -1,0 +1,37 @@
+.error404 {
+
+  .wrap {
+    background-color: $blue-400;
+    padding:240px 0;
+
+    h1,h6 {
+      color:#fff;
+    }
+  }
+
+}
+
+.foundation-board {
+
+  @media(min-width:$screen-sm-min) and (max-width:$screen-lg-max) {
+    display: flex !important;
+    flex-flow: row wrap !important;
+  }
+
+  > * {
+
+    @media(min-width:$screen-sm-min) and (max-width:$screen-lg-max) {
+      flex:1 0 100% !important;
+    }
+
+    &.wp-block-group {
+
+      @media(min-width:$screen-sm-min) and (max-width:$screen-lg-max) {
+        flex:1 0 50% !important;
+      }
+
+    }
+
+  }
+
+}

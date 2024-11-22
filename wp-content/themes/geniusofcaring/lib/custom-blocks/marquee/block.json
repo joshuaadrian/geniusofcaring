@@ -1,0 +1,14 @@
+{
+    "name": "acf/marquee",
+    "title": "Marquee",
+    "description": "A custom marquee block.",
+    "style": [ "file:./marquee.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["locations", "marquee"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "marquee.php"
+    },
+    "align": "full"
+}

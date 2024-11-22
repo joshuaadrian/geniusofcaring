@@ -1,10 +1,9 @@
 <?php
 /**
-* Template Name: Kamaria
+* Template Name: Chuck and Dolores
 */
     session_start();
     get_header();
-        
         
     //Chapter 1
     $content_id = '';
@@ -14,10 +13,7 @@
 <section class="video_container hd_on">
 
     <!-- Chapter One -->
-    <video id="Chapter_One_Video" playsinline="true" autoplay="true" preload="auto" class="active">
-        <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/Kamaria/1/Kamaria_Ch01_TCLoops.webm">
-        <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/Kamaria/1/Kamaria_Ch01_TCLoops.mp4">
-    </video>
+    <div id="Chapter_One_Video" style="height:calc(100vh - 80px);position: relative;"><div style="position:absolute;inset:0;background:black;max-height: 100%;max-width:100%;"><iframe src="https://player.vimeo.com/video/1028184948?h=9595ab0dd9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Kamaria &amp; Mary"></iframe></div></div><script src="https://player.vimeo.com/api/player.js"></script>
 
     <!-- Chapter One -->
     <video id="Chapter_Two_Video" preload="none">
@@ -42,50 +38,6 @@
         <source type="video/webm" src="https://geniusofcaring.s3.amazonaws.com/video/Kamaria/5/TGC_Kamaria_Ch05_-_2016_04_21_H264.webm">
         <source type="video/mp4" src="https://geniusofcaring.s3.amazonaws.com/video/Kamaria/5/TGC_Kamaria_Ch05_-_2016_04_21_H264.mp4">
     </video>
-
-    <div class="bottom_overlay">
-
-        <div class="video_controls">
-            <div class="seek_bar_container">
-                <div class="seek_bar"></div>
-            </div>
-            <span class="play_pause pause"></span>
-            <span class="mute_button mute_off"></span>
-            <div class="volume_container">
-                <div class="volume_slider"></div>
-            </div>
-        </div>
-
-        <nav class="chapters_nav">
-            <ul>
-                <li class="heading">Chapters</li>
-                <li class="one active">Chapter One (1:02)</li>
-                <li class="two">Chapter Two (2:30)</li>
-                <li class="three">Chapter Three (2:08)</li>
-                <li class="four">Chapter Four (2:25)</li>
-                <li class="five">Chapter Five (1:07)</li>
-            </ul>
-        </nav>
-
-    </div>
-
-    <span class="chapter_display">
-        <span class="chapter_1">
-            <span></span>
-        </span>
-        <span class="chapter_2">
-            <span></span>
-        </span>
-        <span class="chapter_3">
-            <span></span>
-        </span>
-        <span class="chapter_4">
-            <span></span>
-        </span>
-        <span class="chapter_5">
-            <span></span>
-        </span>
-    </span>
 
 </section>
 
@@ -125,3 +77,4 @@
 </section>
 
 <?php get_footer(); ?>
+

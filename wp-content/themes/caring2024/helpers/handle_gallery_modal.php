@@ -12,8 +12,8 @@ $answers = $User->get_answers();
 $Prompts = new Prompts();
 $User->get_profile();
 $user_image = $User->user_photo;
-if($user_image == '/wp-content/themes/caring/images/profile_add_image_bttn.png' || $user_image == '/wp-content/themes/caring/images/defaults/profile.png' || $user_image == ''){
-    $user_image = '/wp-content/themes/caring/images/defaults/user_icon.png';
+if($user_image == '/wp-content/themes/caring2024/images/profile_add_image_bttn.png' || $user_image == '/wp-content/themes/caring2024/images/defaults/profile.png' || $user_image == ''){
+    $user_image = '/wp-content/themes/caring2024/images/defaults/user_icon.png';
 }
 
         echo'
@@ -70,7 +70,7 @@ if($user_image == '/wp-content/themes/caring/images/profile_add_image_bttn.png' 
                     $class .= ' active';
                 }
                 if($photo==''){
-                    $photo = '/wp-content/themes/caring/images/defaults/story_images/Untitled-' . $this_field_id . '-' . $img_version . '.jpg';
+                    $photo = '/wp-content/themes/caring2024/images/defaults/story_images/Untitled-' . $this_field_id . '-' . $img_version . '.jpg';
                 }
                 echo'
                             <li class="' . $class . '" data-field_id="' . $this_field_id . '" data-user_id="' . $user_id . '" data-content_id="' . $content_id . '">

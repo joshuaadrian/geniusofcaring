@@ -15,11 +15,11 @@ $cropH = $_POST['cropH'];
 
 $jpeg_quality = 100;
 $rand = rand();
-$image_filename = str_replace(' ','_',str_replace('/wp-content/themes/caring/images/uploads/','',$_POST['imgUrl']));
+$image_filename = str_replace(' ','_',str_replace('/wp-content/themes/caring2024/images/uploads/','',$_POST['imgUrl']));
 $time = time();
-$php_file = "/nas/content/live/geniusofcaring/wp-content/themes/caring/images/uploads/cropped/".$image_filename.'-'.$rand . $time;
-$php_thumb = "/nas/content/live/geniusofcaring/wp-content/themes/caring/images/uploads/cropped/".$image_filename.'-'.$rand . $time . '_thumb';
-$web_file = "/wp-content/themes/caring/images/uploads/cropped/".$image_filename.'-'.$rand . $time;
+$php_file = "/nas/content/live/geniusofcaring/wp-content/themes/caring2024/images/uploads/cropped/".$image_filename.'-'.$rand . $time;
+$php_thumb = "/nas/content/live/geniusofcaring/wp-content/themes/caring2024/images/uploads/cropped/".$image_filename.'-'.$rand . $time . '_thumb';
+$web_file = "/wp-content/themes/caring2024/images/uploads/cropped/".$image_filename.'-'.$rand . $time;
 
 $what = getimagesize($imgUrl);
 switch(strtolower($what['mime']))

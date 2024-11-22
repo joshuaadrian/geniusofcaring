@@ -51,24 +51,7 @@
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
         </nav>
         <nav class="secondary_nav">
-<?php
-    if(is_user_logged_in()){
-        $user__head_image = $User->user_photo;
-        if($User->user_photo == '/wp-content/themes/caring/images/profile_add_image_bttn.png' || $User->user_photo == '/wp-content/themes/caring/images/defaults/profile.png' || $User->user_photo == ''){
-            $user__head_image = '/wp-content/themes/caring/images/defaults/profile.png';
-        }
-    
-        echo'
-            <a href="/my-story" title="Add to your story"><img src="' . $user__head_image . '"></a>
-            <a class="gear" href="/settings" title="Edit Settings">Edit Settings</a>
-            <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>';
-    } else {
-        echo'
-            <a class="login" href="/login">Login</a>
-            <a class="signup" href="/sign-up">Sign Up</a>
-            <span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>';
-    }
-?>    
+<span class="social_button" title="Share The Genius of Caring">Share The Genius of Caring</span>
         </nav>
     </header>
 <?php    
@@ -77,7 +60,7 @@
     <article class="full">
         <section class="intro_masthead">
             <div class="inner">
-                <img src="/wp-content/themes/caring/images/GOC_cons_detection.png" alt="Genius of Caring Conversations">
+                <img src="/wp-content/themes/caring2024/images/GOC_cons_detection.png" alt="Genius of Caring Conversations">
                 <iframe src="https://player.vimeo.com/video/135098495?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 <p>It starts in different ways for different people – those tiny early warning signs.</p>
                 <p>They can be subtle, confusing, frustrating, alarming. Though it can be tempting to dismiss these uncertain moments, early detection enables us to seek not only treatment, but also support. The sooner we know, the sooner we can begin to manage what is happening.</p>
@@ -89,16 +72,16 @@
             <p><a href="http://geniusofcaring.wpengine.com/posts/why-women-should-worry-about-alzheimers-by-jill-lesser-and-trish-vradenburg">Why Women Should Worry About Alzheimer's by Jill Lesser and Trish Vradenburg</a></p>
             <p><a href="http://geniusofcaring.wpengine.com/posts/early-diagnosis-of-alzheimers">Early Diagnosis of Alzheimer's</a></p>
             <p><a href="http://geniusofcaring.wpengine.com/posts/it-was-the-little-things-at-first-by-loretta-veney">It was the Little Things at First by Loretta Veney</a></p>
-            <h1>Share Your Story</h1>
-            <p>Do you have personal experience with this conversation topic, or with Alzheimer’s in general? We’d love you to join us on our Caregiver Portraits page.</p>
-            <a class="button" onClick="ga('send', 'event', 'share_your_story', 'buttonclick', 'detection_page', 1);" href="/portraits/pam-ed">Share Your Story</a>
+            
+            
+            
             <h1>Continue the Conversation</h1>
             <p>Follow us on social media where we’re having an ongoing discussion about this topic. Learn what others think and share your point of view. Use the hashtag #geniusofcaring.</p>
             <a class="twitter_icon" onClick="ga('send', 'event', 'social', 'buttonclick', 'twitter', 1);" href="https://twitter.com/geniusofmarian">Twitter</a>
             <a class="facebook_icon" onClick="ga('send', 'event', 'social', 'buttonclick', 'facebook', 1);" href="https://www.facebook.com/TheGeniusOfMarian">Facebook</a>
             <p>&nbsp;</p>
-            <h1>Sign the Guestbook</h1>
-            <div class="fb-comments" data-href="<?php the_permalink() ?>" data-numposts="5"></div>
+            
+            
         </div>
     </article>
 <?php

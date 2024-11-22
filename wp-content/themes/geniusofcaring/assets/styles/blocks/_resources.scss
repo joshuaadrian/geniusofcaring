@@ -1,0 +1,62 @@
+.resource {
+
+	&--block {
+		
+		@media(min-width:$screen-md-min) {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+
+		+ .resource--block {
+			border-top:1px solid $gray-500;
+			padding-top:30px;
+			margin-top:30px;
+
+			@media(min-width:$screen-md-min) {
+				padding-top:60px;
+				margin-top:60px;
+			}
+		}
+	}
+
+	&--image {
+
+		img {
+			object-fit: contain;
+		}
+
+	}
+
+	&--title {
+		flex:1;
+		color:currentColor;
+		padding:10px 0 45px;
+		align-self: center;
+		margin:0;
+
+		@media(min-width:$screen-md-min) {
+			padding:0 60px;
+		}
+	}
+
+	&--button {
+
+		align-self: center;
+
+		p {
+			display: block;
+			margin:0;
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+
+	}
+
+}

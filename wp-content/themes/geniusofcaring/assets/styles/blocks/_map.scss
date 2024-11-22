@@ -1,0 +1,266 @@
+@import "~leaflet/dist/leaflet.css";
+@import "~leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
+@import '~leaflet.markercluster/dist/MarkerCluster.css';
+@import '~leaflet.markercluster/dist/MarkerCluster.Default.css';
+
+::placeholder {
+  font-weight: 700;
+  color:#fff;
+  opacity: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0;
+  box-shadow:0 0 3px rgba(0,0,0,0.15);
+  padding:0;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  z-index: 10;
+  font-size:48px;
+  color:$blue-400;
+  font-weight: 100;
+  font-family: $font-family-sans-serif;
+  top:10px;
+  right:15px;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+.leaflet-popup {
+
+}
+
+.is-pc .leaflet-tile-container img {
+    width: 512.5px !important;
+    height: 512.5px !important;
+}
+
+img.leaflet-tile, img.leaflet-marker-icon, img.leaflet-marker-shadow {
+    /* work-around from here: https://github.com/Leaflet/Leaflet/issues/161 */
+    outline: 1px solid transparent;
+    /* work-around from here: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
+    mix-blend-mode: plus-lighter;
+}
+
+.leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	margin-top: -1px;
+	margin-left: -30px;
+	overflow: hidden;
+	pointer-events: none;
+	top: 100px;
+	rotate: 90deg;
+
+	.leaflet-popup-tip {
+		background:$white;
+	}
+}
+
+.leaflet-marker-icon {
+
+	&.marker-cluster {
+
+		&.marker-cluster-small {
+
+			background-color:transparent;
+
+			> div {
+				background-color:rgba(#ffffff, 1);
+			}
+
+		}
+
+		&.marker-cluster-medium {
+
+			background-color:transparent;
+
+			> div {
+				background-color:rgba(#ffffff, 1);
+			}
+
+		}
+
+		&.marker-cluster-large {
+
+			background-color:transparent;
+
+			> div {
+				background-color:rgba(#ffffff, 1);
+			}
+
+		}
+
+		span {
+			font-family: $font-family-headings;
+			font-weight: 600;
+			color:$blue-400;
+		}
+
+	}
+
+}
+
+.leaflet-popup-content {
+
+	margin:0;
+	height:400px !important;
+	width:640px !important;
+
+  .map--popup {
+
+	padding:30px 30px 30px 280px;
+	background:#fff;
+	border-radius: 0;
+	position: relative;
+	width:640px !important;
+	height:400px !important;
+	color:$blue-400;
+
+    &--image {
+		width:250px;
+		height:100%;
+		top:0;
+		left:0;
+		bottom:0;
+		margin:0;
+		position: absolute;
+		z-index: 1;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+    }
+
+    &--businesses {
+
+    	h4 {
+
+    		position: relative;
+    		padding:30px 0 0;
+    		margin:30px 0 15px;
+    		font-size:24px;
+
+    		&:before {
+    			content:'';
+    			width:60px;
+    			height:1px;
+    			background:#7f8f9b;
+    			position: absolute;
+    			top:0;
+    			left:0;
+    		}
+
+    	}
+
+    	p {
+
+    	}
+
+    }
+
+    &--content {
+
+    }
+
+    h3 {
+      margin:0 0 10px;
+      font-size:28px;
+    }
+
+    p {
+
+      display: block;
+      margin: 0;
+      line-height: 1.5;
+      font-size:18px;
+
+      + p {
+      	margin:20px 0 0;
+      }
+
+    }
+
+  }
+
+}
+
+.map {
+
+	&--header {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		max-width: 1400px;
+		margin-left:auto;
+		margin-right:auto;
+		padding:45px 20px;
+
+		@media(min-width:$screen-md-min) {
+			flex-flow: row nowrap;
+			padding:45px 0;
+		}
+
+		h4 {
+			font-size:16px;
+			color:$gray-200;
+			text-transform: uppercase;
+			line-height: 1.25;
+			letter-spacing: 1px;
+		}
+	}
+
+	&--block {
+
+		background-color: $blue-400;
+
+		#map {
+			display: block;
+			height:700px;
+  		width:100%;
+  		margin:0;
+  		background-color: $blue-400;
+		}
+
+	}
+
+	&--legend {
+		display: flex;
+		flex-flow: row wrap;
+		margin:0;
+		list-style-type: none;
+		padding:0;
+
+		@media(min-width:$screen-md-min) {
+			flex-flow: row nowrap;
+			justify-content: flex-end;
+		}
+
+		li {
+			font-size:16px;
+			color:$white;
+			text-transform: uppercase;
+			line-height: 1.25;
+			padding:0;
+			margin:20px 0 0;
+			letter-spacing: 1px;
+			width:100%;
+
+			@media(min-width:$screen-md-min) {
+				margin:0 0 0 20px;
+				width:auto;
+			}
+
+			&:last-child {
+				color:#7397cf;
+			}
+
+		}
+		
+	}
+
+}

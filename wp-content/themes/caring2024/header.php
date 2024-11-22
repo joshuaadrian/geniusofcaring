@@ -1,17 +1,3 @@
-<?php
-/**
- * The Header for our theme.
- */
-
- if(is_user_logged_in()){
-        if ( !class_exists('Database') ) : require_once(get_stylesheet_directory() . '/class/Db.php'); endif;
-        if ( !class_exists('User') ) : require_once(get_stylesheet_directory() . '/class/User.php'); endif;
-        $User = new User; 
-        $User->useSession();
-        $User->get_profile();
-        $user_logged_in = 'logged_in';
-    }
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

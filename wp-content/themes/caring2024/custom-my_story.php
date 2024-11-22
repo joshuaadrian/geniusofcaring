@@ -16,16 +16,16 @@
         $user_image = $User->user_photo;
         $user_type = $User->user_type;
 		$details_complete = true;
-        if($user_image == '/wp-content/themes/caring/images/defaults/profile.png'){
+        if($user_image == '/wp-content/themes/caring2024/images/defaults/profile.png'){
 			$details_complete = false;
-            $user_image = '/wp-content/themes/caring/images/profile_add_image_bttn.png';
+            $user_image = '/wp-content/themes/caring2024/images/profile_add_image_bttn.png';
         }
 		if($User->user_bio=='' || $User->user_name==''){
 			$details_complete = false;
 		}
         $user__head_image = $User->user_photo;
-        if($User->user_photo == '/wp-content/themes/caring/images/profile_add_image_bttn.png' || $User->user_photo == '/wp-content/themes/caring/images/defaults/profile.png' || $User->user_photo == ''){
-            $user__head_image = '/wp-content/themes/caring/images/defaults/profile.png';
+        if($User->user_photo == '/wp-content/themes/caring2024/images/profile_add_image_bttn.png' || $User->user_photo == '/wp-content/themes/caring2024/images/defaults/profile.png' || $User->user_photo == ''){
+            $user__head_image = '/wp-content/themes/caring2024/images/defaults/profile.png';
         }
 
         echo'

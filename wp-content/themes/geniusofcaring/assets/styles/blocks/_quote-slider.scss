@@ -1,0 +1,185 @@
+.quote-slider {
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+
+	&.has-gray-waves-style {
+		background-image:url(../images/background-waves-gray.jpg);
+		background-color:#f1f2f3;
+	}
+
+	&.has-white-waves-style {
+		background-image:url(../images/background-waves-white.jpg);
+	}
+
+	&--wrapper {
+
+	}
+
+	.flickity-page-dots {
+
+		bottom:45px;
+		width:180px;
+		justify-content: center;
+
+		@media(min-width:$screen-md-min) {
+			width:200px;
+		}
+
+		@media(min-width:$screen-lg-min) {
+			width:200px;
+		}
+
+		.flickity-page-dot {
+
+			background:#c5d0df;
+			margin:5px;
+
+			&:focus,
+			&:active,
+			&:hover {
+				outline:none;
+				box-shadow: none;
+			}
+
+			&.is-selected {
+				background:#6a97d4;
+			}
+
+		}
+	}
+
+	.qs-item {
+
+		width:100%;
+
+		&--container {
+			margin:0 auto;
+			padding:120px 0;
+
+			@media(min-width:$screen-lg-min) {
+				display: flex;
+				flex-flow: row nowrap;
+				align-content: center;
+				align-items: center;
+			}
+		}
+
+		&--content {
+			flex:1;
+			margin:0 0 60px;
+
+			@media(min-width:$screen-lg-min) {
+				margin:0 90px 0 0;
+			}
+		}
+
+		&--quote {
+
+			width:100%;
+			display: flex;
+			flex-flow: row wrap;
+
+			&--title {
+				color:$blue-400;
+				margin:0;
+			}
+
+			&--copy {
+
+				flex:1 0 100%;
+				padding:30px 0 0;
+
+				@media(min-width:$screen-lg-min) {
+					flex:1;
+					padding:0;
+				}
+
+				blockquote {
+
+					font-size:24px;
+					line-height: 1.65;
+					margin:10px 0 0;
+
+					@media(min-width:$screen-md-min) {
+						font-size:32px;
+					}
+
+					q {
+						
+						&:before {
+							position: relative;
+
+							@media(min-width:$screen-sm-min) {
+								margin-left:-14px;
+							}
+						}
+
+					}
+
+				}
+			}
+
+			&--image {
+				width:200px;
+				height:200px;
+				border-radius: 100%;
+				overflow: hidden;
+				margin:0 auto;
+				position: relative;
+
+				@media(min-width:$screen-lg-min) {
+					margin:0 60px 0 0;
+				}
+
+				div {
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: right bottom;
+					position: absolute;
+					top:0;
+					left:0;
+					right:0;
+					bottom:0;
+				}
+			}
+			
+		}
+
+		&--citee {
+			flex:1 0 100%;
+			color:$blue-400;
+			font-size: 16px;
+			margin:30px 0 0;
+			text-transform: uppercase;
+			display: block;
+			font-weight: 500;
+
+			span {
+				display: inline-block;
+				margin:0 10px 0 0;
+				position: relative;
+
+				&:after {
+					content:'|';
+					display: inline-block;
+					margin:0 0 0 10px;
+					position: relative;
+					top:-1px;
+				}
+			}
+		}
+
+		p {
+			flex:1 0 100%;
+			margin:20px 0 0;
+		}
+
+		&--video {
+			flex:1 0 auto;
+		}
+
+	}
+
+}

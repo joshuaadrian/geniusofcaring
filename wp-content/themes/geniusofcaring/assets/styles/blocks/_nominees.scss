@@ -1,0 +1,125 @@
+.nominees {
+
+  &--block {
+
+  }
+
+  &--grid {
+    padding:0 0 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+
+    // @media(min-width:$screen-sm-min) {
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
+
+    @media(min-width:$screen-md-min) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(min-width:$screen-lg-min) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media(min-width:$screen-xl-min) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  &--item {
+    padding:0;
+    border-radius: 6px;
+    background-color: $pink-400;
+    overflow: hidden;
+    position: relative;
+
+    &.is-hiding {
+      display: none;
+    }
+
+    &--name {
+
+      margin:0;
+      font-size:18px;
+      font-weight: 600;
+      line-height: 1.2;
+      color:$blue-400;
+      padding:20px;
+      font-family: $font-family-headings;
+
+      small {
+        display: block;
+        margin:10px 0 0;
+        font-weight: 400;
+        font-size:16px;
+      }
+
+    }
+
+    &--image {
+      height:0;
+      padding-top:100%;
+      width:100%;
+      position: relative;
+      overflow: hidden;
+
+      div {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        transform:scale(1);
+        transition:transform 0.3s ease-in-out;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image:url(../images/nominees-image-placeholder.jpg);
+      }
+
+    }
+
+    &--link {
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index: 3;
+      display: block;
+    }
+
+    &.nominees--item--view-all {
+
+      p {
+        height:100%;
+        width:100%;
+
+        a {
+          height:100%;
+          width:100%;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: flex-end;
+          font-size:22px;
+          font-weight: 600;
+          line-height: 1;
+          padding:20px 60px 20px 20px;
+          font-family: $font-family-headings;
+          background-position: calc(100% - 20px) calc(100% - 22px);
+          background-repeat: no-repeat;
+          background-size: 24px auto;
+          background-image:url(../images/icon-arrow.png);
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}

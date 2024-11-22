@@ -86,7 +86,7 @@
                 <button class="skip">Skip</button>
             </section>
             <section class="overlay data">
-                <img class="data_slide" src="/wp-content/themes/caring/images/slide.png">
+                <img class="data_slide" src="/wp-content/themes/caring2024/images/slide.png">
                 <button>Continue</button>
             </section>
         </section>';

@@ -1,0 +1,14 @@
+{
+    "name": "acf/nominees",
+    "title": "Nominees",
+    "description": "A custom nominees block.",
+    "style": [ "file:./nominees.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["nominees"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "nominees.php"
+    },
+    "align": "full"
+}

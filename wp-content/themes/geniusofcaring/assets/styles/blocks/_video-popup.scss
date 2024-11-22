@@ -1,0 +1,60 @@
+.video-popup {
+
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	background-repeat:no-repeat;
+	height:0;
+	padding-top:100%;
+
+	&.is-landscape {
+		padding-top:70%;
+	}
+
+	&.is-cinema {
+		padding-top:56.25%;
+	}
+
+	.wp-block-buttons {
+		display: block;
+		position: absolute;
+		right:30px;
+		bottom:25px;
+		z-index: 2;
+
+		// &:after {
+	    //   background:url(../images/icons/icon-play.svg) center center / 20px auto no-repeat transparent;
+	    //   height:30px;
+	    //   width:30px;
+	    //   overflow: hidden;
+	    //   position: absolute;
+	    //   bottom:30px;
+	    //   right:30px;
+	    //   content:'';
+	    //   display: block;
+		// }
+
+	}
+
+	.video-popup--content {
+
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		z-index: 1;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+
+		.video-popup--content-inner {
+			padding:0;
+			color:#fff;
+			position: relative;
+
+		}
+
+	}
+
+}
